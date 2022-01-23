@@ -1,4 +1,5 @@
 #include "../include/runner.h"
+
 #include <stdbool.h>
 #include <iostream>
 #include <sstream>
@@ -10,7 +11,9 @@
 
 namespace rawr {
 
-    runner::runner() {}
+    runner::runner() {
+
+    }
             
     
     void runner::run() {
@@ -39,7 +42,8 @@ namespace rawr {
                 input.push_back(a);
             }
 
-            input.clear();
+            main_narrator.exec(input);
+
         }
         // Bye message
         std::cout << "GoodBye!"<< std::endl;

@@ -19,13 +19,17 @@ OBJS := $(subst $(SOURCEDIR),$(LIBDIR),$(SOURCES:.c=.o))
 DEPS = $(OBJS:.o=.d)
 # ******************************************************
 
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o
+test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o
+		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o
 
 tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
 
 runner.o: $(INCLUDEDIR)/runner.h
+narrator.o: $(INCLUDEDIR)/narrator.h
+
+test-clean:
+	$(RM) test.exe $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(TESTDIR)/tester.o
 
 # # Exec
 # main: tester.o runner.o
