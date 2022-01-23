@@ -1,4 +1,4 @@
-#include "runner.h"
+#include "../include/runner.h"
 #include <stdbool.h>
 #include <iostream>
 #include <sstream>
@@ -47,7 +47,7 @@ namespace rawr {
 
     
     runner::~runner() {
-        std::cout << "lol" << std::endl;
+
     }
 
 }

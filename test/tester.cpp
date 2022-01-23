@@ -1,5 +1,5 @@
 #include <iostream>
-#include "runner.h"
+#include "../include/runner.h"
 
 int main() {
     rawr::runner main_loop;
