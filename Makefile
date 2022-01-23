@@ -19,17 +19,3 @@ runner.o: runner.h
 
 clean:
 	$(RM) main runner.o tester.o
-
-# TARGET = tester
-
-# runner.o: runner.cpp runner.h
-# 		$(CC) $(CFLAGS) -o runner.cpp
-
-
-# all: $(TARGET) runner.o
-
-# $(TARGET): $(TARGET).cpp
-# 		$(CC) $(CFLAGS) -o $(TARGET) $(TARGET).cpp runner.o
-
-# clean:
-# 	$(RM) $(TARGET)

@@ -39,12 +39,7 @@ namespace rawr {
                 input.push_back(a);
             }
 
-
-            // cout verb piece one
-            std::cout << "Verb: " << input[0] << std::endl;
-
-            // cout object piece two
-            std::cout << "Object: " << input[1] << std::endl;
+            input.clear();
         }
         // Bye message
         std::cout << "GoodBye!"<< std::endl;

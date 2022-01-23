@@ -2,6 +2,8 @@
 #include "runner.h"
 
 int main() {
-    std::cout << "Hello World!" << std::endl;
+    rawr::runner main_loop;
+    main_loop.run();
+
     return 0;
 }
