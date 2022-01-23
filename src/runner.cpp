@@ -20,7 +20,7 @@ namespace rawr {
         
         std::vector<std::string> input;
         std::string bye = "quit";
-
+   
         while(true) {
             std::string raw_input;
             
@@ -49,6 +49,9 @@ namespace rawr {
         std::cout << "GoodBye!"<< std::endl;
     }
 
+    void runner::setNarrator(rawr::narrator narrator) {
+        main_narrator = narrator;
+    }
     
     runner::~runner() {
 

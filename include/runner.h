@@ -8,6 +8,7 @@ namespace rawr {
         public:
             runner();
             void run();
+            void setNarrator(rawr::narrator narrator);
             ~runner();
         private:
             rawr::narrator main_narrator;
