@@ -14,5 +14,13 @@ namespace rawr{
         input.clear();
     }
 
+    void narrator::learnScene(rawr::scene &new_scene){
+        scenes.push_back(new_scene);
+    }
+
+    bool narrator::knowScenes(){
+        return scenes.size() > 0;
+    }
+
     narrator::~narrator() {}
 }

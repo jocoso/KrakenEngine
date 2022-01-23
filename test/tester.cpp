@@ -8,7 +8,8 @@ int main() {
     rawr::narrator main_narrator;
 
     rawr::scene room_0("Booting... Visuals: FALSE. Running secondary options.");
-    
+    main_narrator.learnScene(room_0);
+
     main_loop.setNarrator(main_narrator);
     main_loop.run();
     return 0;
