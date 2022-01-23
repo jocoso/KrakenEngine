@@ -11,9 +11,6 @@ namespace rawr{
             return;
         }
 
-        std::cout << "Directive: " << input[0] << std::endl;
-        std::cout << "Object: " << input[1] << std::endl;
-
         input.clear();
     }
 
