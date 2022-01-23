@@ -1,8 +1,7 @@
 #include <iostream>
-#include "./runner.h"
+#include "runner.h"
 
 int main() {
-    rawr::runner game_runner;
-
+    std::cout << "Hello World!" << std::endl;
     return 0;
 }

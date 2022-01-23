@@ -1,4 +1,4 @@
-#include "./runner.h"
+#include "runner.h"
 #include <stdbool.h>
 #include <iostream>
 #include <sstream>
@@ -16,7 +16,7 @@ namespace rawr {
     void runner::run() {
         
         std::vector<std::string> input;
-        char *bye = "quit";
+        std::string bye = "quit";
 
         while(true) {
             std::string raw_input;
@@ -28,7 +28,7 @@ namespace rawr {
             
             // If input 1 is quit break
 
-            if(strcmp(raw_input.c_str(), bye) == 0) break;
+            if(strcmp(raw_input.c_str(), bye.c_str()) == 0) break;
 
             // Separate input into pieces
             std::stringstream ss(raw_input);
