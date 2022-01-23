@@ -3,6 +3,7 @@
 
 #include <vector>
 #include <string>
+#include <stdbool.h>
 
 namespace rawr {
     class narrator {
