@@ -7,7 +7,7 @@ int main() {
     rawr::runner main_loop;
     rawr::narrator main_narrator;
 
-    rawr::scene room_0("Booting... Visuals: FALSE. Running secondary options.");
+    rawr::scene room_0("You wake up in the middle of the street. Your car is a wreck.");
     main_narrator.learnScene(room_0);
 
     main_loop.setNarrator(main_narrator);

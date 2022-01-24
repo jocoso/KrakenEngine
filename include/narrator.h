@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <stdbool.h>
+#include <unordered_map>
 
 #include "../include/scene.h"
 
@@ -17,12 +18,15 @@ namespace rawr {
     class narrator {
         public:
             narrator();
-            void exec(std::vector<std::string> &input);
             void learnScene(rawr::scene &scene);
+            std::string exec(std::vector<std::string> &input);
+            std::string describeScene();
             bool knowScenes();
             ~narrator();
         private:
             std::vector<rawr::scene> scenes;
+
+            int current_room;
     };
 }
 
