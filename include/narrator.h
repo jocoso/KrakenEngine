@@ -4,7 +4,6 @@
 #include <vector>
 #include <string>
 #include <stdbool.h>
-#include <unordered_map>
 
 #include "../include/scene.h"
 
