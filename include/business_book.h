@@ -9,25 +9,15 @@
 */
 
 namespace rawr {
-    struct verb {
-        virtual std::string run(std::string obj) = 0;
-    };
-
-    struct describe : public verb {
-        virtual std::string run(std::string obj) override {
-            return "Description done";
-        }
-    } describe;
-
+    
     class business_book {
         public:
             business_book();
             virtual std::string search(std::string name, std::string object)=0;
+            std::string describe(std::string object);
+            void temp();
             ~business_book();
-        private:
-            std::unordered_map<std::string, const verb &> book = {
-                { "describe", describe }
-            };
+
     }; 
 }
 
