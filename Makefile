@@ -19,8 +19,8 @@ OBJS := $(subst $(SOURCEDIR),$(LIBDIR),$(SOURCES:.c=.o))
 DEPS = $(OBJS:.o=.d)
 # ******************************************************
 
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o
+test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/business_book.o
+		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/business_book.o
 
 tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
@@ -28,9 +28,10 @@ tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 runner.o: $(INCLUDEDIR)/runner.h
 narrator.o: $(INCLUDEDIR)/narrator.h
 scene.o: $(INCLUDEDIR)/scene.h
+business_book.o: $(INCLUDEDIR)/business_book.h
 
 test-clean:
-	$(RM) test.exe $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o
+	$(RM) test.exe $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/business_book.o
 
 # # Exec
 # main: tester.o runner.o
