@@ -26,9 +26,9 @@ tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
 
 runner.o: $(INCLUDEDIR)/runner.h
-narrator.o: $(INCLUDEDIR)/narrator.h
+narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h
 scene.o: $(INCLUDEDIR)/scene.h
-action_book.o: $(INCLUDEDIR)/general_book.h  $(INCLUDEDIR)/action_book.h
+action_book.o: $(INCLUDEDIR)/general_book.h  $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h
 
 test-clean:
 	$(RM) test.exe $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o
