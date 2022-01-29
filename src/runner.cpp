@@ -42,8 +42,7 @@ namespace rawr {
                 input.push_back(a);
             }
 
-            main_narrator.exec(input);
-
+            std::cout << main_narrator.exec(input) << std::endl;
         }
         // Bye message
         std::cout << "GoodBye!"<< std::endl;
