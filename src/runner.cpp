@@ -21,7 +21,10 @@ namespace rawr {
         std::vector<std::string> input;
         std::string bye = "quit";
    
+         std::cout << main_narrator.getIntro() << std::endl;
+
         while(true) {
+
             std::string raw_input;
             
             std::cout << ">";

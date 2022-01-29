@@ -18,15 +18,19 @@ namespace rawr {
     class narrator {
         public:
             narrator();
+            narrator(std::string intro);
             void learnScene(rawr::scene &scene);
             void assignActionBook(rawr::action_book &book);
             std::string exec(std::vector<std::string> &input);
             std::string describeScene();
+            void setIntro(const std::string intro);
+            std::string getIntro();
             bool knowScenes();
             ~narrator();
         private:
             std::vector<rawr::scene> scenes;
             rawr::action_book *book = nullptr;
+            std::string game_intro;
             int current_room;
     };
 }
