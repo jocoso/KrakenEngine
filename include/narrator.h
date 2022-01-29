@@ -5,7 +5,8 @@
 #include <string>
 #include <stdbool.h>
 
-#include "../include/scene.h"
+#include "./scene.h"
+#include "./action_book.h"
 
 
 /*
@@ -18,13 +19,14 @@ namespace rawr {
         public:
             narrator();
             void learnScene(rawr::scene &scene);
+            void assignActionBook(rawr::action_book &book);
             std::string exec(std::vector<std::string> &input);
             std::string describeScene();
             bool knowScenes();
             ~narrator();
         private:
             std::vector<rawr::scene> scenes;
-
+            rawr::action_book *book = nullptr;
             int current_room;
     };
 }

@@ -1,24 +1,36 @@
 #include "../include/narrator.h"
 #include <iostream>
+#include <stdio.h>
 
 namespace rawr{
     narrator::narrator() {
         current_room = 0;
     }
 
+
+    // Implements the action_book in the main loop. 
     std::string narrator::exec(std::vector<std::string> &input) {
         if(input.size() < 2) {
             // This message will be modifiable by the users in the future.
             return "Not an input I can recognize.";
         }
 
-        input.clear();
+        if(this->book == nullptr) {
+            perror("RAWR_ERROR: The narrator must have an instance of action_book assigned.");
+            exit(2);
+        }
 
-        return "I don't know what to tell you.";
+        std::string out = this->book->exec(input);
+        input.clear();
+        return out;
     }
 
     void narrator::learnScene(rawr::scene &new_scene){
         scenes.push_back(new_scene);
+    }
+
+    void narrator::assignActionBook(rawr::action_book &book) {
+        this->book = &book;
     }
 
     bool narrator::knowScenes(){
