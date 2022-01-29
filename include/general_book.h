@@ -7,7 +7,7 @@
             public:
                 general_book();
                 std::string exec(std::vector<std::string> input, rawr::scene current_scene);
-                std::string describe(std::string obj, rawr::scene);
+                std::string describe(rawr::scene current_scene);
                 ~general_book();
         };
     }
