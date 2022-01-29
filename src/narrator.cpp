@@ -20,7 +20,9 @@ namespace rawr{
             exit(2);
         }
 
-        std::string out = this->book->exec(input);
+        // TODO: Rememeber to add a sanity check to this clustefuck of a line
+        std::string out = this->book->exec(input, scenes[current_room]);
+        
         input.clear();
         return out;
     }
@@ -35,16 +37,6 @@ namespace rawr{
 
     bool narrator::knowScenes(){
         return (scenes.size() > 0) ? true : false;
-    }
-
-    std::string narrator::describeScene() {
-        if(this->knowScenes() == true) {
-            return scenes[current_room].getSceneIntro();
-        }
-
-        std::string a = "I'm sorry. I don't know.";
-
-        return a;
     }
 
     narrator::~narrator() {}

@@ -6,8 +6,8 @@
         class general_book : public action_book {
             public:
                 general_book();
-                std::string exec(std::vector<std::string> input);
-                std::string describe(std::string obj);
+                std::string exec(std::vector<std::string> input, rawr::scene current_scene);
+                std::string describe(std::string obj, rawr::scene);
                 ~general_book();
         };
     }
