@@ -10,47 +10,49 @@ Rawr is a free and open-source library for the development of text-adventure gam
 
 Rawr should be pretty easy to use, clone or download the repository and add it to your project using the following includes.
 
-<code>
-#include "../include/scene.h"
-#include "../include/runner.h"
-#include "../include/narrator.h"
-#include "../include/general_book.h"
+<pre><code>
+    #include "../include/scene.h"
+    #include "../include/runner.h"
+    #include "../include/narrator.h"
+    #include "../include/general_book.h"
 
-int main() {
-    // The runner class is the core of the game loop
-    rawr::runner main_loop;
+    int main() {
 
-    // Creates an instance of the narrator class.
-    // The narrator class takes care of feeding inputs, maps, actions
-    // and all other important game pieces to the main loop.
-    rawr::narrator main_narrator;
+        // The runner class is the core of the game loop
+        rawr::runner main_loop;
 
-    // General book is a child of the class action_book. 
-    // action_book as a virtual class is in charge of checking for inputs
-    // and managing actions to these inputs by using information supplied by the narrator class.
-    
-    // Go to <strong>src/general_book.cpp</strong> to see an example
-    rawr::general_book book;
+        // Creates an instance of the narrator class.
+        // The narrator class takes care of feeding inputs, maps, actions
+        // and all other important game pieces to the main loop.
+        rawr::narrator main_narrator;
 
-    // Example of how we create a room.
-    rawr::scene room_0("You wake up in the middle of the street. Your car is a wreck.");
+        // General book is a child of the class action_book. 
+        // action_book as a virtual class is in charge of checking for inputs
+        // and managing actions to these inputs by using information supplied by the narrator class.
+        
+        // Go to <strong>src/general_book.cpp</strong> to see an example
+        rawr::general_book book;
 
-    // The narrator will accept each room separatedly and save it in its map.
-    // TODO: The narrator can accept a vector map instead.
-    main_narrator.learnScene(room_0);
+        // Example of how we create a room.
+        rawr::scene room_0("You wake up in the middle of the street. Your car is a wreck.");
 
-    // Assign the action_book child to the narrator. 
-    // Then narrator class will then execute the actions and reactions listed in the child class.
-    main_narrator.assignActionBook(book);
+        // The narrator will accept each room separatedly and save it in its map.
+        // TODO: The narrator can accept a vector map instead.
+        main_narrator.learnScene(room_0);
 
-    // The main loop requires to be given a narrator
-    main_loop.setNarrator(main_narrator);
+        // Assign the action_book child to the narrator. 
+        // Then narrator class will then execute the actions and reactions listed in the child class.
+        main_narrator.assignActionBook(book);
 
-    // Stars the main loop.
-    main_loop.run();
+        // The main loop requires to be given a narrator
+        main_loop.setNarrator(main_narrator);
 
-    return 0;
-}
+        // Stars the main loop.
+        main_loop.run();
 
-</code>
+        return 0;
+
+    }
+
+</code></pre>
 
