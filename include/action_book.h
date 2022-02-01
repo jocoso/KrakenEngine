@@ -15,7 +15,7 @@ namespace rawr {
     
     class action_book {
         public:
-            virtual std::string exec(std::vector<std::string> input, rawr::scene current_scene) = 0;
+            virtual std::string exec(const std::vector<std::string> input, rawr::scene current_scene) = 0;
     }; 
 }
 

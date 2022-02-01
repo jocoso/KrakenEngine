@@ -52,7 +52,7 @@ namespace rawr {
     }
 
     void runner::setNarrator(rawr::narrator narrator) {
-        main_narrator = narrator;
+        this->main_narrator = narrator;
     }
     
     runner::~runner() {

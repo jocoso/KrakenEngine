@@ -9,14 +9,17 @@
     namespace rawr {
         class scene {
             public:
-                scene();
-                scene(std::string new_intro);
+                scene(std::string name);
+                scene(std::string name, std::string new_intro);
                 std::string getSceneIntro();
-                void setSceneIntro(std::string new_intro);
+                std::string getSceneName();
+                void setSceneIntro(const std::string new_intro);
+                void setSceneName(const std::string name);
                 ~scene();    
             
             private:
                 std::string scene_intro;
+                std::string scene_name;
         };
     }
 

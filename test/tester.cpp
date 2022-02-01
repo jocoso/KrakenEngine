@@ -13,7 +13,11 @@ int main() {
     rawr::narrator main_narrator;
     rawr::general_book book;
 
-    rawr::scene room_0("You wake up in the middle of the street. Your car is a wreck.");   
+    main_narrator.setIntro("You woke up inside a cloud of black.\
+    The smoke burning the soft tissue of your lungs. You coughed,\
+    a ping of pain followed your desperated attempts to breathe.");
+
+    rawr::scene room_0("Crash Scene", "You wake up in the middle of the street. Your car is a wreck.");   
     main_narrator.learnScene(room_0);
     main_narrator.assignActionBook(book);
 
