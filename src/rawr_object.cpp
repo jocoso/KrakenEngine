@@ -1,24 +1,24 @@
-#include "../include/rawr_object.h"
+#include "../include/prop.h"
 
 namespace rawr {
-    rawr_object::rawr_object( std::string name, std::string desc ) {
+    prop::prop( std::string name, std::string desc ) {
         this->name = name;
         this->description = desc;
     }
 
-    std::string rawr_object::get_name() {
+    std::string prop::get_name() {
         return this->name;
     }
 
-    void rawr_object::set_name( std::string name ) {
+    void prop::set_name( std::string name ) {
         this->name = name;
     }
 
-    std::string rawr_object::get_description() {
+    std::string prop::get_description() {
         return this->description;
     }
 
-    void rawr_object::set_description( std::string name ) {
+    void prop::set_description( std::string name ) {
         this->description = name;
     }
 

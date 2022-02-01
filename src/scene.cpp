@@ -1,4 +1,4 @@
-#include "../include/scene.h"
+#include "../include/props.h"
 
 namespace rawr {
     scene::scene( std::string scene_name, std::string scene_desc ) : rawr_object( scene_name, scene_desc ) {}

@@ -1,12 +1,12 @@
-#ifndef RAWR_OBJECT_H
-#define RAWR_OBJECT_H
+#ifndef PROP_H
+#define PROP_H
 
     #include <string>
 
     namespace rawr {
-        class rawr_object {
+        class prop {
             public: 
-                explicit rawr_object( std::string name, std::string desc );
+                explicit prop( std::string name, std::string desc );
                 std::string get_name();
                 void set_name( std::string name );
                 std::string get_description();
