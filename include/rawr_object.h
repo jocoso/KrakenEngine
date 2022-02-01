@@ -1,12 +1,11 @@
-#ifndef _RAWR_OBJECT_H
-#define _RAWR_OBJECT_H
+#ifndef RAWR_OBJECT_H
+#define RAWR_OBJECT_H
 
     #include <string>
 
     namespace rawr {
         class rawr_object {
             public: 
-                explicit rawr_object();
                 explicit rawr_object( std::string name, std::string desc );
                 std::string get_name();
                 void set_name( std::string name );

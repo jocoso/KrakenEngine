@@ -1,5 +1,5 @@
-#ifndef _RUNNER_
-#define _RUNNER_
+#ifndef RUNNER_H
+#define RUNNER_H
 
 #include "../include/narrator.h"
 

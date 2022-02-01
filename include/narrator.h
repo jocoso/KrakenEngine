@@ -1,5 +1,5 @@
-#ifndef __NARRATOR__
-#define __NARRATOR__
+#ifndef NARRATOR_H
+#define NARRATOR_H
 
 #include <vector>
 #include <string>

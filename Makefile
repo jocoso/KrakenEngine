@@ -19,12 +19,13 @@ OBJS := $(subst $(SOURCEDIR),$(LIBDIR),$(SOURCES:.c=.o))
 DEPS = $(OBJS:.o=.d)
 # ******************************************************
 
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o
+test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/rawr_object.o
+		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/rawr_object.o
 
 tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
 
+rawr_object.o: $(INCLUDEDIR)/rawr_object.h
 runner.o: $(INCLUDEDIR)/runner.h
 narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h
 scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/rawr_object.h

@@ -1,5 +1,5 @@
-#ifndef __ACT_BOOK__
-#define __ACT_BOOK__
+#ifndef ACT_BOOK_H
+#define ACT_BOOK_H
 
 #include <vector>
 #include <string>

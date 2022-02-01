@@ -1,21 +1,13 @@
-#ifndef __SCENE__
-#define __SCENE__
+#ifndef SCENE_H
+#define SCENE_H
+    #include "./rawr_object.h"
+    #include <string>
 
-#include <string>
-#include "./rawr_object.h"
-
-/*
-    The Scene class will be a placeholder
-    for all the information regarding a specific place
-*/
     namespace rawr {
         class scene : public rawr_object {
             public:
-                scene();
-                scene(std::string name, std::string new_intro);
+                scene( std::string scene_name, std::string scene_desc );
                 std::string get_scene_intro();
-                void set_scene_intro(const std::string new_intro);
-                ~scene();
         };
     }
 

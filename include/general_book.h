@@ -1,5 +1,5 @@
-#ifndef __GEN_BOOK__
-#define __GEN_BOOK__
+#ifndef GEN_BOOK_H
+#define GEN_BOOK_H
     #include "./action_book.h"
 
     namespace rawr {
