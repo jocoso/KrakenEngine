@@ -13,13 +13,13 @@ namespace rawr{
         game_intro = intro + "\n\n";
     }
 
+    bool narrator::check_narrator_integrity() {
+        if(this->book == nullptr || !this->knowScenes()) return false;
+        return true;
+    }
+
     // Implements the action_book in the main loop. 
     std::string narrator::exec(const char* input) {
-        if(this->book == nullptr) {
-            perror("RAWR_ERROR: The narrator must have an instance of action_book assigned.");
-            exit(2);
-        }
-
         // TODO: Rememeber to add a sanity check to this clustefuck of a line
         std::string out = this->book->exec(input, scenes[current_room]) + "\n\n";
         

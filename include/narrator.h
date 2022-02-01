@@ -19,6 +19,7 @@ namespace rawr {
         public:
             narrator();
             narrator(std::string intro);
+            bool check_narrator_integrity();
             void learnScene(rawr::scene &scene);
             void assignActionBook(rawr::action_book &book);
             std::string exec(const char* input);

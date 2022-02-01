@@ -17,11 +17,16 @@ namespace rawr {
             
     
     void runner::run() {
+
+        if(!this->main_narrator.check_narrator_integrity()) {
+            perror("RAWR_ERROR[101]: Narrator is not set up correctly. Add to it an instace of general_book or scene to solve this issue.");
+            exit(1);
+        }
         
         std::string bye = "quit";
         char* input;
    
-        // std::cout << main_narrator.getIntro() << std::endl;
+        std::cout << main_narrator.getIntro() << std::endl;
 
         while(true) {
 
