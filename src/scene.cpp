@@ -6,4 +6,12 @@ namespace rawr {
     std::string scene::get_scene_intro() {
         return "<" + get_name() + ">" + "\n\t" + get_description();
     }
+
+    void scene::add_item_list( std::vector<rawr_object> item_list ) {
+        this->item_list = item_list;
+    }
+
+    void scene::add_item( rawr_object object ) {
+        this->item_list.push_back(object);
+    }
 }
