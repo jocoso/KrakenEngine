@@ -14,7 +14,7 @@ namespace rawr{
     }
 
     // Implements the action_book in the main loop. 
-    std::string narrator::exec(std::vector<std::string> &input) {
+    std::string narrator::exec(const char* input) {
         if(this->book == nullptr) {
             perror("RAWR_ERROR: The narrator must have an instance of action_book assigned.");
             exit(2);
@@ -23,7 +23,6 @@ namespace rawr{
         // TODO: Rememeber to add a sanity check to this clustefuck of a line
         std::string out = this->book->exec(input, scenes[current_room]) + "\n\n";
         
-        input.clear();
         return out;
     }
 

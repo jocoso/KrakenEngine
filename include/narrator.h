@@ -21,7 +21,7 @@ namespace rawr {
             narrator(std::string intro);
             void learnScene(rawr::scene &scene);
             void assignActionBook(rawr::action_book &book);
-            std::string exec(std::vector<std::string> &input);
+            std::string exec(const char* input);
             std::string describeScene();
             void setIntro(const std::string intro);
             std::string getIntro();
