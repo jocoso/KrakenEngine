@@ -27,7 +27,7 @@ tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 
 runner.o: $(INCLUDEDIR)/runner.h
 narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h
-scene.o: $(INCLUDEDIR)/scene.h
+scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/rawr_object.h
 action_book.o: $(INCLUDEDIR)/general_book.h  $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h
 
 test-clean:

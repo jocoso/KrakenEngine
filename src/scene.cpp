@@ -1,29 +1,15 @@
 #include "../include/scene.h"
 
 namespace rawr {
-    scene::scene(std::string name) {
-        this->scene_name = name;
+    scene::scene() : rawr_object() {}
+    scene::scene(std::string name, std::string new_intro) : rawr_object(name, new_intro) {}
+
+    std::string scene::get_scene_intro() {
+        return this->description;
     }
 
-    scene::scene(std::string name, std::string new_intro) {
-        this->scene_name = name;
-        this->scene_intro = new_intro;
-    }
-
-    std::string scene::getSceneIntro() {
-        return this->scene_intro;
-    }
-
-    std::string scene::getSceneName() {
-        return this->scene_name;
-    }
-
-    void scene::setSceneIntro(const std::string new_intro) {
-        this->scene_intro = new_intro;
-    }
-
-    void scene::setSceneName(const std::string name) {
-        this->scene_name = name;
+    void scene::set_scene_intro(const std::string new_intro) {
+        this->description = new_intro;
     }
 
     scene::~scene() {}
