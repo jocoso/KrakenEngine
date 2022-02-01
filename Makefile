@@ -31,7 +31,7 @@ scene.o: $(INCLUDEDIR)/scene.h
 action_book.o: $(INCLUDEDIR)/general_book.h  $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h
 
 test-clean:
-	$(RM) test.exe $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o
+	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o 
 
 # # Exec
 # main: tester.o runner.o
