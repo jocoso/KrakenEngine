@@ -3,7 +3,6 @@
 
 #include <vector>
 #include <string>
-#include <unordered_map>
 
 #include "./scene.h"
 /*
@@ -12,10 +11,18 @@
 */
 
 namespace rawr {
-    
+    typedef struct line {
+        std::string prompt;
+        std::vector<std::string> options;
+        void *action;
+    } line;
+
     class action_book {
         public:
             virtual std::string exec(const char *input, rawr::scene current_scene) = 0;
+            virtual void init() = 0;
+        protected:
+            std::vector<line> script;
     }; 
 }
 
