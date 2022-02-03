@@ -14,20 +14,27 @@ namespace rawr{
     }
 
     bool narrator::check_narrator_integrity() {
-        if( this->book == nullptr || !this->knowScenes() ) return false;
+        if( this->book == nullptr || 
+            !this->knowScenes()   ||
+            this->main == nullptr
+          ) return false;
         return true;
     }
 
     // Implements the action_book in the main loop. 
     std::string narrator::exec( const char* input ) {
         // TODO: Rememeber to add a sanity check to this clustefuck of a line
-        std::string out = this->book->exec( input, scenes[ current_room ] ) + "\n\n";
+        std::string out = this->book->exec( input, scenes[ current_room ], *main ) + "\n\n";
         
         return out;
     }
 
     void narrator::learnScene( scene &new_scene ){
         scenes.push_back( new_scene );
+    }
+
+    void narrator::meet_main_character( character &main ) {
+        this->main = &main;
     }
 
     void narrator::assignActionBook( action_book &book ) {

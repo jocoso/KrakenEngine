@@ -7,7 +7,9 @@ namespace rawr {
     general_book::general_book() {}
 
     string general_book::exec(const char* input, 
-                                   scene current_scene) {
+                            scene current_scene,
+                            character main
+                            ) {
         if(this->compare(input, "describe")) {
             return describe(current_scene);
         }

@@ -20,8 +20,8 @@ DEPS = $(OBJS:.o=.d)
 # ******************************************************
 
 #! Test runner
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o 
+test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o
+		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o
 
 #! Test Object
 tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
@@ -30,13 +30,14 @@ tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 # Libraries
 prop.o: $(INCLUDEDIR)/prop.h
 runner.o: $(INCLUDEDIR)/runner.h
+character.o: $(INCLUDEDIR)/character.h
 scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/prop.h
-narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h
-action_book.o: $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h
+narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/character.h
+action_book.o: $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/character.h
 general_book.o: $(INCLUDEDIR)/general_book.h $(INCLUDEDIR)/action_book.h
 
 test-clean:
-	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o 
+	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o 
 
 # # Exec
 # main: tester.o runner.o

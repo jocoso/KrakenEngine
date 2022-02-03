@@ -5,8 +5,9 @@
 
     namespace rawr {
         class character : public prop {
-            character( std::string name, std::string desc );
-            ~character();
+            public:
+                character( std::string name, std::string desc );
+                ~character();
         };
     }
 #endif

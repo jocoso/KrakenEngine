@@ -1,7 +1,7 @@
 #ifndef RUNNER_H
 #define RUNNER_H
 
-#include "../include/narrator.h"
+#include "narrator.h"
 
 namespace rawr {
     class runner {

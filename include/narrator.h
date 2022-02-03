@@ -7,6 +7,7 @@
 
 #include "./scene.h"
 #include "./action_book.h"
+#include "./character.h"
 
 
 /*
@@ -21,6 +22,7 @@ namespace rawr {
             narrator( std::string intro );
             bool check_narrator_integrity();
             void learnScene( scene &scene );
+            void meet_main_character( character &main );
             void assignActionBook( action_book &book );
             std::string exec( const char* input );
             std::string describeScene();
@@ -30,7 +32,8 @@ namespace rawr {
             ~narrator();
         private:
             std::vector<rawr::scene> scenes;
-            rawr::action_book *book = nullptr;
+            action_book *book = nullptr;
+            character *main = nullptr;
             std::string game_intro;
             int current_room;
     };
