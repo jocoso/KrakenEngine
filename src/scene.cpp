@@ -13,6 +13,6 @@ namespace rawr {
     }
 
     void scene::add_item( prop object ) {
-        this->item_list.push_back(object);
+        this->item_list.push_back( object );
     }
 }

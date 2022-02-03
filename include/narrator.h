@@ -18,13 +18,13 @@ namespace rawr {
     class narrator {
         public:
             narrator();
-            narrator(std::string intro);
+            narrator( std::string intro );
             bool check_narrator_integrity();
-            void learnScene(rawr::scene &scene);
-            void assignActionBook(rawr::action_book &book);
-            std::string exec(const char* input);
+            void learnScene( scene &scene );
+            void assignActionBook( action_book &book );
+            std::string exec( const char* input );
             std::string describeScene();
-            void setIntro(const std::string intro);
+            void setIntro( const std::string intro );
             std::string getIntro();
             bool knowScenes();
             ~narrator();

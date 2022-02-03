@@ -8,10 +8,10 @@ namespace rawr {
         public:
             runner();
             void run();
-            void setNarrator(rawr::narrator narrator);
+            void setNarrator( narrator narrator );
             ~runner();
         private:
-            rawr::narrator main_narrator;
+            narrator main_narrator;
     };
 }
 #endif

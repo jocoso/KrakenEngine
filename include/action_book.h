@@ -16,7 +16,7 @@ using std::string;
 namespace rawr {
     class action_book {
         public:
-            virtual string exec(const char *input, rawr::scene current_scene) = 0;
+            virtual string exec(const char *input, scene current_scene) = 0;
             bool compare(const char *string1, const char *string2);
     }; 
 }
