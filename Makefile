@@ -20,27 +20,23 @@ DEPS = $(OBJS:.o=.d)
 # ******************************************************
 
 #! Test runner
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/rawr_object.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/rawr_object.o
-
-test-script: $(TESTDIR)/test_script_book.o $(SOURCEDIR)/script_book.o
-		$(CC) $(CFLAGS) -o test1 $(TESTDIR)/test_script_book.o $(SOURCEDIR)/script_book.o
+test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o
+		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o 
 
 #! Test Object
 tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
 		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
-test_script_book.o: $(TESTDIR)/test_script_book.cpp $(INCLUDEDIR)/script_book.h
 
 # Libraries
-rawr_object.o: $(INCLUDEDIR)/rawr_object.h
+prop.o: $(INCLUDEDIR)/prop.h
 runner.o: $(INCLUDEDIR)/runner.h
+scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/prop.h
 narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h
-scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/rawr_object.h
-action_book.o: $(INCLUDEDIR)/general_book.h  $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h
-script_book.o: $(INCLUDEDIR)/script_book.h
+action_book.o: $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h
+general_book.o: $(INCLUDEDIR)/general_book.h $(INCLUDEDIR)/action_book.h
 
 test-clean:
-	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/rawr_object.o 
+	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.h $(SOURCEDIR)/prop.o 
 
 # # Exec
 # main: tester.o runner.o
