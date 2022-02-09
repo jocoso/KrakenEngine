@@ -17,27 +17,22 @@ TARGET = main.exe
 SOURCES = $(foreach dir,$(SOURCEDIR),$(wildcard $(dir)/*.c))
 OBJS := $(subst $(SOURCEDIR),$(LIBDIR),$(SOURCES:.c=.o))
 DEPS = $(OBJS:.o=.d)
+EXEC = ./
 # ******************************************************
 
 #! Test runner
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o
+test: $(TESTDIR)/test_window_open.o $(SOURCEDIR)/runner.o
+		$(CC) $(CFLAGS) -o test1 $(TESTDIR)/test_window_open.o $(SOURCEDIR)/runner.o
 
 #! Test Object
-tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
-		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
+test_window_open.o: $(TESTDIR)/test_window_open.cpp $(INCLUDEDIR)/runner.h
+		$(CC) $(CFLAGS) -c $(TESTDIR)/test_window_open.cpp
 
 # Libraries
-prop.o: $(INCLUDEDIR)/prop.h
 runner.o: $(INCLUDEDIR)/runner.h
-character.o: $(INCLUDEDIR)/character.h
-scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/prop.h
-narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/character.h
-action_book.o: $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/character.h
-general_book.o: $(INCLUDEDIR)/general_book.h $(INCLUDEDIR)/action_book.h
 
 test-clean:
-	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o 
+	$(RM) test1.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(TESTDIR)/test_window_open.o
 
 # # Exec
 # main: tester.o runner.o

@@ -1,19 +1,22 @@
 #ifndef RUNNER_H
 #define RUNNER_H
 
-#include "narrator.h"
+    #include <windows.h>
 
-namespace rawr {
-    class runner {
-        public:
-            runner();
-            void run();
-            void setNarrator( narrator narrator );
-            ~runner();
-        private:
-            narrator main_narrator;
-    };
-}
+    /*
+        Opens a window and instantiates all the parts of the 
+        graphic Interface. Serves as a hub where the distinct
+        information of each window can be shared and processed.
+    */
+
+    namespace krk {
+        class runner {
+            public:
+                runner();
+                void run();
+                ~runner();
+        };
+    }
 #endif
 
 
