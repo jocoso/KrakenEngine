@@ -3,8 +3,7 @@
 
 | Name | Master | Stable |
 |------|--------|--------|
-| SeaMonster VS 0.01 [![Build Status](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/badge/icon)](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/) |
-| [![Build Status](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/badge/icon)](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/)|
+| SeaMonster VS 0.01 [![Build Status](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/badge/icon)](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/) |[![Build Status](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/badge/icon)](https://build.kde.org/job/Extragear/job/krita/job/kf5-qt5%20SUSEQt5.15/)|
 
 ** Installation **
 -------------------
