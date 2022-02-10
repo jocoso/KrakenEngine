@@ -7,10 +7,10 @@
 
 ** Installation **
 -------------------
+
 ::
 
-	git clone git@github.com:jocoso/Kraken.git
-
+   git clone git@github.com:jocoso/Kraken.git
 
 
 ```
