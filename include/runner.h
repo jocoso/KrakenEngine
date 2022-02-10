@@ -1,7 +1,7 @@
 #ifndef RUNNER_H
 #define RUNNER_H
 
-    #include <windows.h>
+    #include <wx/wxprec.h>
 
     /*
         Opens a window and instantiates all the parts of the 
