@@ -1,5 +1,7 @@
 #include "theater.h"
 
+
+
 namespace krk {
 	Theater::Theater( int width, int height, const char* title ) {
 		// Initiate GLFW
@@ -34,29 +36,29 @@ namespace krk {
 		// ====================================
 	}
 
-	void Theater::display() {
+	void Theater::display( Shape &shape ) {
 		// Open Window
-		glfwMakeContextCurrent( window );
+		glfwMakeContextCurrent(window);
 		gladLoadGL();
-
-		// Make Initial Window Color a bland gray
-		glViewport( 0, 0, 800, 820 );
-		glClearColor( 0.5f, 0.5f, 0.5, 1.0f );
-		glClear( GL_COLOR_BUFFER_BIT );
-		glfwSwapBuffers( window );
 
 		// As long as the window is open execute the window's events
 		while (!glfwWindowShouldClose(window)) {
+			shape.present(window);
 			glfwPollEvents();
-		}	
+		}
+
+		
 	}
 
+	
 	Theater::~Theater() {
+
 		// Destroy the Window (self explanatory)
 		// Sanity Check
 		if ( !( window == NULL ) ) {
 			glfwDestroyWindow( window );
 		}
+
 		glfwTerminate();
 	}
 }
