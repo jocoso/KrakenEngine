@@ -146,7 +146,17 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="glad.c" />
+    <ClCompile Include="kraken_theater.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="shape.cpp" />
+    <ClCompile Include="triangle.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common.h" />
+    <ClInclude Include="kraken_theater.h" />
+    <ClInclude Include="shape.h" />
+    <ClInclude Include="prop.h" />
+    <ClInclude Include="triangle.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
