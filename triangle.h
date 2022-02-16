@@ -4,7 +4,7 @@
 
 	class Triangle : public Shape {
 	public:
-		Triangle(const float vertices[9]) : Shape(vertices) {};
+		Triangle(const float vertices[18], const unsigned int indices[9]) : Shape(vertices, indices) {};
 		void display() override;
 	};
 

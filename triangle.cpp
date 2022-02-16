@@ -7,6 +7,5 @@
 		glUseProgram(shape_shader_program);
 		// Bind the VAO so OpenGL knows to use it
 		glBindVertexArray(VAO);
-		// Draw the triangle using the GL_TRIANGLES primitive
-		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glDrawElements(GL_TRIANGLES, 9, GL_UNSIGNED_INT, 0);
 	}

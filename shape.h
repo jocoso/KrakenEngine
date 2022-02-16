@@ -11,7 +11,7 @@
 			/// </summary>
 			/// <param name="vertice">Plane points as a float array.</param>
 			
-			Shape(const float vertice[]);
+			Shape(const float vertice[], const unsigned int indice[]);
 			virtual void display() = 0;
 
 			/// <summary>
@@ -21,8 +21,9 @@
 
 		protected:
 			GLuint shape_shader_program;
-			GLuint VAO, VBO;
-			float vertices[9];
+			GLuint VAO, VBO, EBO;
+			GLfloat vertices[18];
+			GLuint indices[9];
 	};
 
 #endif

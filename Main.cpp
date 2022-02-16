@@ -19,12 +19,21 @@ int main() {
 	kt.changeCurtainsColor(0.07f, 0.13f, 0.17f);
 
 	float vertices[] = {
-		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,
-		0.5, -0.5f * float(sqrt(3)) / 3, 0.0f,
-		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f
+		-0.5f, -0.5f * float(sqrt(3)) / 3, 0.0f,      // Lower Left
+		0.5, -0.5f * float(sqrt(3)) / 3, 0.0f,        // Lower Right
+		0.0f, 0.5f * float(sqrt(3)) * 2 / 3, 0.0f,    // Upper Corner
+		-0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f,   // Inner Left    
+		0.5f / 2, 0.5f * float(sqrt(3)) / 6, 0.0f,   // Inner right
+		0.0f, -0.5f * float(sqrt(3)) / 3, 0.0f         // Inner down
 	};
 
-	Triangle t(vertices);
+	unsigned int indices[] = {
+		0, 3, 5,	// Lower left
+		3, 2, 4,	// Lower right
+		5, 4, 1		// Upper triangle
+	};
+
+	Triangle t(vertices, indices);
 	Shape* s = &t;
 
 	kt.openCurtains(s);
