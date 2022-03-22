@@ -1,3 +1,4 @@
 ﻿  Main.cpp
-C:\Users\Joshua\Desktop\programming\C++\Kraken\Main.cpp(31): warning C4715: 'function1': not all control paths return a value
+  controller.cpp
+  Generating Code...
   Kraken.vcxproj -> C:\Users\Joshua\Desktop\programming\C++\Kraken\x64\Debug\Kraken.exe
