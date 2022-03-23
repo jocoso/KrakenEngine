@@ -1,40 +1,22 @@
 #include <iostream>
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+#include <string>
+#include "controller.h"
 
-void framebuffer_size_callback(GLFWwindow* window, int width, int height) {
-	glViewport(0, 0, width, height);
+// Function Tests: All the posible user verbs.
+void function1(std::string input) {
+    if (input == "HELLO")
+        std::cout << "HI" << std::endl;
+    else
+        std::cout << "I CAN'T UNDERSTAND" << std::endl;
 }
 
 int main(void) {
-	glfwInit();
 
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-	glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
+    // Create controller and run it.
+    Controller *c = new Controller();
+    c->add_input_map(&function1);
+    c->run();
+    delete c;
 
-	glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-
-	GLFWwindow* window = glfwCreateWindow(800, 600, "Josh", NULL, NULL);
-
-	if (window == NULL) {
-		std::cout << "Failed to create a GLFW window" << std::endl;
-		glfwTerminate();
-		return -1;
-	}
-
-	glfwMakeContextCurrent(window);
-
-	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
-		std::cout << "Failed to initialize GLAD" << std::endl;
-		return 0;
-	}
-
-	glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
-	
-	while (!glfwWindowShouldClose(window)) {
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-	}
-
-	return 0;
+    return 0;
 }
