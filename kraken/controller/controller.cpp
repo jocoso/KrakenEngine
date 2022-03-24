@@ -1,8 +1,12 @@
+// KrakenController.cpp
+// A user-friendly control library
+// by Joshua Collado
+// as of 3-23-2022
+
 #include "controller.h"
 
-
 void Controller::add_input_map(void(*func)(std::string)) {
-    this->func = func;
+    this->_func = func;
 }
 
 // Helper method
@@ -17,17 +21,17 @@ std::string Controller::get_user_input(const char* prompt) {
 
 // Render loop
 void Controller::run() {
-    isRunning = true;
+    _isRunning = true;
 
-    while (isRunning) {
+    while (_isRunning) {
         std::string user_response = this->get_user_input("-->");
 
         if (user_response == "QUIT") {
-            isRunning = false;
+            _isRunning = false;
         }
         else {
             try {
-                this->func(user_response);
+                this->_func(user_response);
             }
             catch (...) {
                 exit(1);

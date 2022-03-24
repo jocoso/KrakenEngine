@@ -18,15 +18,24 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="glad.c">
+    <ClCompile Include="kraken\controller\controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="controller.cpp">
+    <ClCompile Include="kraken\tools\protstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kraken\tools\prottest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="controller.h">
+    <ClInclude Include="kraken\controller\controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kraken\tools\protstring.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kraken\tools\prottest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

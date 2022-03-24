@@ -1,11 +1,15 @@
 #include <iostream>
+#include "kraken/controller/controller.h"
+#include "kraken/tools/protstring.h"
+#include "kraken/tools/prottest.h"
 
-using namespace std;
 
-// https://www.youtube.com/watch?v=XpBGwZNyUh0&t=35s
+bool summary_flag = false;
 
-int main() {
-  cout << "Hello World" << endl;
-  cin.get();
-  return 0;
+int main(void) {
+    ProtString str = "Joshua";
+    std::cout << str << std::endl;
+ 
+
+    return 0;
 }
