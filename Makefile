@@ -1,56 +1,18 @@
-# Makefile for Writing Make Files Example
- 
-# *****************************************************
-# Variables to control Makefile operation
-CC = g++
-# Debugging info
-CFLAGS = -g -Wall
+CXX = $(shell wx-config --cxx)
 
-PROJDIR := $(realpath $(CURDIR))
-INCLUDEDIR := $(PROJDIR)/include
-SOURCEDIR := $(PROJDIR)/src
-TESTDIR := $(PROJDIR)/test
-LIBDIR := $(PROJDIR)/lib
+PROGRAM = main
+OBJECTS := $(patsubst %.cpp, %.o, $(wildcard *.cpp))
 
-TARGET = main.exe 
+# implementation
 
-SOURCES = $(foreach dir,$(SOURCEDIR),$(wildcard $(dir)/*.c))
-OBJS := $(subst $(SOURCEDIR),$(LIBDIR),$(SOURCES:.c=.o))
-DEPS = $(OBJS:.o=.d)
-# ******************************************************
+.SUFFIXES: .o .cpp
 
-#! Test runner
-test: $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o
-		$(CC) $(CFLAGS) -o test $(TESTDIR)/tester.o $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o
+.cpp.o: $(CXX) -x `wx-config --cxxflags` -o $@ $<
 
-#! Test Object
-tester.o: $(TESTDIR)/tester.cpp $(INCLUDEDIR)/runner.h
-		$(CC) $(CFLAGS) -c $(TESTDIR)/tester.cpp
+all: $(PROGRAM)
 
-# Libraries
-prop.o: $(INCLUDEDIR)/prop.h
-runner.o: $(INCLUDEDIR)/runner.h
-character.o: $(INCLUDEDIR)/character.h
-scene.o: $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/prop.h
-narrator.o: $(INCLUDEDIR)/narrator.h $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/character.h
-action_book.o: $(INCLUDEDIR)/action_book.h $(INCLUDEDIR)/scene.h $(INCLUDEDIR)/character.h
-general_book.o: $(INCLUDEDIR)/general_book.h $(INCLUDEDIR)/action_book.h
+$(PROGRAM): $(OBJECTS)
+	$(CXX) -o $(PROGRAM) $(OBJECTS) `wx-config --libs`
 
-test-clean:
-	$(RM) test.exe $(RM) test.exe.stackdump $(SOURCEDIR)/runner.o $(SOURCEDIR)/narrator.o $(SOURCEDIR)/scene.o $(TESTDIR)/tester.o $(SOURCEDIR)/general_book.o $(SOURCEDIR)/action_book.o $(SOURCEDIR)/prop.o $(SOURCEDIR)/character.o 
-
-# # Exec
-# main: tester.o runner.o
-# 		$(CC) $(CFLAGS) -o main tester.o runner.o
-
-# test: ./test/tester.o ./include/runner.o
-# 		$(CC) $(CFLAGS) -o test ./test/tester.o ./include/runner.o
-
-# tester.o: ./test/tester.cpp ./include/runner.h
-# 		$(CC) $(CFLAGS) -c ./test/tester.cpp
-
-# ./include/runner.o: ./include/runner.h 
-# 		$(CC) $(CFLAGS) -c ./include/runner.h
-
-# clean:
-# 	$(RM) main ./include/runner.o ./test/tester.o
+clean:
+	rm -f *.o $(PROGRAM)
