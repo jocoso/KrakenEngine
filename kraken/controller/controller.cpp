@@ -5,26 +5,23 @@
 
 #include "controller.h"
 
-void Controller::add_input_map(void(*func)(std::string)) {
+Controller::Controller() {
+    _brush = new Console();
+    _isRunning = false;
+}
+
+void Controller::add_input_map(void(*func)(const char *)) {
     this->_func = func;
 }
 
-// Helper method
-std::string Controller::get_user_input(const char* prompt) {
-    std::string line;
-
-    std::cout << prompt;
-    std::getline(std::cin, line);
-
-    return line;
-}
 
 // Render loop
 void Controller::run() {
     _isRunning = true;
 
     while (_isRunning) {
-        std::string user_response = this->get_user_input("-->");
+        const char* user_response = this->_brush->get_user_response("-->");
+  
 
         if (user_response == "QUIT") {
             _isRunning = false;

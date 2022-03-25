@@ -1,0 +1,25 @@
+// Console.h
+// A displayer for the kraken library
+// by Joshua Collado
+// as of 3-24-2022
+
+#ifndef __Prototype__Console__H
+#define __Prototype__Console__H
+
+#include <iostream>
+#include <sstream>
+#include <stdlib.h>
+#include <string>
+#include "../tools/protstring.h"
+
+#define MAX_NAME_LEN 50
+
+class Console {
+public:
+	void println(const char *promp) const;
+	void print(const char *prompt) const;
+	const char* get_user_response(const char* prompt) const;
+	
+};
+
+#endif /*defined(__Prototype__Console__H)*/

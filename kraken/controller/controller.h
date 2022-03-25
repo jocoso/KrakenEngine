@@ -6,17 +6,19 @@
 #ifndef __Prototype__Controller__
 #define __Prototype__Controller__
 
-#include <string>
-#include <iostream>
+#include "../tools/protstring.h"
+#include "../console/console.h"
 
 #define __ControllerPrototype_VERSION "0.0.1 Sea Monster"
 
 class Controller {
-    void(*_func)(std::string) = nullptr;
+    Console *_brush;
+    void(*_func)(const char *) = nullptr;
     bool _isRunning;
 public:
-    void add_input_map(void (*func)(std::string));
-    std::string get_user_input(const char* prompt);
+    Controller();
+    ~Controller() { delete _brush; }
+    void add_input_map(void (*func)(const char *));
     static const char* version() { return __ControllerPrototype_VERSION; }
     void run();
 };
