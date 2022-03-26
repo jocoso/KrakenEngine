@@ -42,3 +42,7 @@ const char* Console::print_and_get_response(const char* prompt) const {
 	return output;
 	
 }
+
+bool Console::are_equal(const char* a, const char* b) const {
+	return (strcmp(a, b) == 0);
+}

@@ -25,16 +25,29 @@ void consoleTest() {
 }
 
 void function_test(const char* input, Console* console) {
-    if (strcmp(input, "ROSE") == 0)
-        console->println("ROJA");
-    else 
+
+    ProtTest pt("===INPUT===");
+    if (console->are_equal(input, "JUMP")) {
+        pt.test("Input is the same as JUMP?", strcmp(input, "JUMP") == 0);
+        console->println("How High?");
+    } else if (console->are_equal(input, "GO")) {
+        pt.test("Input is the same as GO?", strcmp(input, "GO") == 0);
+        console->println("Where?");
+    } else if (console->are_equal(input, "TAKE")) {
+        pt.test("Input is the same as TAKE?", strcmp(input, "TAKE") == 0);
+        console->println("What?");
+    } else if(console->are_equal(input, "KILL")) {
+        pt.test("Input is the same as KILL?", strcmp(input, "KILL") == 0);
+        console->println("Whom?");
+    } else {
         console->println("I Can't Understand");
-    
+    }
+
 }
 
 void controllerTest() {
     Controller *c = new Controller();
-    ProtTest pt("===CONTROLLER===");
+    
     c->add_input_map(&function_test);
     std::cout << c->version() << std::endl;
     c->run();

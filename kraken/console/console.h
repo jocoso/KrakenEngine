@@ -20,6 +20,7 @@ public:
 	void print(const char *prompt) const;
 	const char* println_and_get_response(const char* prompt) const;
 	const char* print_and_get_response(const char* prompt) const;
+	bool are_equal(const char* a, const char* b) const;
 };
 
 #endif /*defined(__Prototype__Console__H)*/
