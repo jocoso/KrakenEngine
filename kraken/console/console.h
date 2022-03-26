@@ -18,8 +18,8 @@ class Console {
 public:
 	void println(const char *promp) const;
 	void print(const char *prompt) const;
-	const char* get_user_response(const char* prompt) const;
-	
+	const char* println_and_get_response(const char* prompt) const;
+	const char* print_and_get_response(const char* prompt) const;
 };
 
 #endif /*defined(__Prototype__Console__H)*/

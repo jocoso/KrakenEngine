@@ -18,7 +18,8 @@ void Console::print(const char* prompt) const {
 // or
 // DO SOMETHING WITH SOMETHING
 // Thus there is not need for a big length
-const char* Console::get_user_response(const char* prompt) const {
+const char* Console::println_and_get_response(const char* prompt) const {
+
 	const char* output;
 	char* buffer = (char*)malloc(MAX_NAME_LEN * sizeof(char*));
 
@@ -26,11 +27,18 @@ const char* Console::get_user_response(const char* prompt) const {
 	std::cin.getline(buffer, MAX_NAME_LEN);
 
 	output = buffer;
-
 	return output;
 }
 
+const char* Console::print_and_get_response(const char* prompt) const {
 
-//ProtString Console::get_user_response(const char* prompt) {
-//	return NULL;
-//}
+	const char* output;
+	char* buffer = (char*)malloc(MAX_NAME_LEN * sizeof(char*));
+
+	this->print(prompt);
+	std::cin.getline(buffer, MAX_NAME_LEN);
+
+	output = buffer;
+	return output;
+	
+}

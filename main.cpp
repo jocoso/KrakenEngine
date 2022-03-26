@@ -17,27 +17,33 @@ void consoleTest() {
 
     Console* c = new Console();
     ProtTest pt("===Console===");
-    const char* foo = c->get_user_response("Write DONE");
+    const char* foo = c->println_and_get_response("Write DONE");
     pt.test("String given by the user is the same as the as it asks for:", strcmp(foo, "DONE") == 0);
     pt.report();
     delete c;
 
 }
 
-void function_test(const char* input) {
+void function_test(const char* input, Console* console) {
+    if (strcmp(input, "ROSE") == 0)
+        console->println("ROJA");
+    else 
+        console->println("I Can't Understand");
     
 }
 
 void controllerTest() {
-    Controller c;
+    Controller *c = new Controller();
     ProtTest pt("===CONTROLLER===");
-
+    c->add_input_map(&function_test);
+    std::cout << c->version() << std::endl;
+    c->run();
+    delete c;
 }
 
 int main(void) {
 
-    
-    
+    controllerTest();
 
     return 0;
 }

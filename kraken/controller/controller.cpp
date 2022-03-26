@@ -10,7 +10,7 @@ Controller::Controller() {
     _isRunning = false;
 }
 
-void Controller::add_input_map(void(*func)(const char *)) {
+void Controller::add_input_map(void(*func)(const char*, Console*)) {
     this->_func = func;
 }
 
@@ -20,15 +20,15 @@ void Controller::run() {
     _isRunning = true;
 
     while (_isRunning) {
-        const char* user_response = this->_brush->get_user_response("-->");
+        const char* user_response = this->_brush->print_and_get_response("-->");
   
 
-        if (user_response == "QUIT") {
+        if (strcmp(user_response, "QUIT") == 0) {
             _isRunning = false;
         }
         else {
             try {
-                this->_func(user_response);
+                this->_func(user_response, _brush);
             }
             catch (...) {
                 exit(1);
