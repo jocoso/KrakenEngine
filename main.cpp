@@ -2,6 +2,10 @@
 #include "kraken/controller/controller.h"
 #include "kraken/tools/protstring.h"
 #include "kraken/tools/prottest.h"
+#include "kraken/user/object/item/item.h"
+#include "kraken/user/object/place/place.h"
+#include "kraken/user/object/person/person.h"
+#include "kraken/user/object/object.h"
 
 #include <string>
 
@@ -54,9 +58,51 @@ void controllerTest() {
     delete c;
 }
 
+void testPlacePersonAndItem() {
+    Item* i;
+    Person* p;
+    Place* pl;
+    try {
+        ProtTest pt("== ITEM, PERSON, PLACE ===");
+
+        i = new Item("Test Item", "Just a Test");
+        p = new Person("Test Person", "Just a Test");
+        pl = new Place("Test Place", "Just a Test");
+
+        pt.test("Information can be safetly stored and retrieved from Item", strcmp(i->get_name(), "Test Item") == 0);
+        pt.test("Information can be safetly stored and retrieved from Person", strcmp(p->get_name(), "Test Person") == 0);
+        pt.test("Information can be safetly stored and retrieved from Place", strcmp(pl->get_name(), "Test Place") == 0);
+        
+        pt.report();
+
+        delete i, p, pl;
+    }catch(...) {
+        std::cout << "NONONO" << std::endl;
+        throw;
+    }
+
+}
+
+void testPolymorphicObject() {
+    ProtTest pt("=== Polymorphic Object ===");
+    
+    Item i("name", "desc");
+    Person p("name", "desc");
+    Place pl("name", "desc");
+
+    Object* obj[]{ &i, &p, &pl};
+
+    for (int i = 0; i < 3; i++) {
+        pt.test("Can access item, person, place as an object type?", strcmp(obj[i]->get_name(), "name") == 0);
+    }
+
+    pt.report();
+
+}
+
 int main(void) {
 
-    controllerTest();
+    testPolymorphicObject();
 
     return 0;
 }

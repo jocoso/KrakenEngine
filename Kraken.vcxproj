@@ -149,6 +149,10 @@
     <ClCompile Include="kraken\controller\controller.cpp" />
     <ClCompile Include="kraken\tools\protstring.cpp" />
     <ClCompile Include="kraken\tools\prottest.cpp" />
+    <ClCompile Include="kraken\user\object\item\item.cpp" />
+    <ClCompile Include="kraken\user\object\object.cpp" />
+    <ClCompile Include="kraken\user\object\person\person.cpp" />
+    <ClCompile Include="kraken\user\object\place\place.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -156,6 +160,10 @@
     <ClInclude Include="kraken\controller\controller.h" />
     <ClInclude Include="kraken\tools\protstring.h" />
     <ClInclude Include="kraken\tools\prottest.h" />
+    <ClInclude Include="kraken\user\object\item\item.h" />
+    <ClInclude Include="kraken\user\object\object.h" />
+    <ClInclude Include="kraken\user\object\person\person.h" />
+    <ClInclude Include="kraken\user\object\place\place.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
