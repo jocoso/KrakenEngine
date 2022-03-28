@@ -30,6 +30,12 @@
     <ClCompile Include="kraken\console\console.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kraken\user\object\object.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="kraken\user\object\item\item.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kraken\controller\controller.h">
@@ -45,6 +51,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="kraken\tools\arraylist.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kraken\user\object\object.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kraken\user\object\item\item.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

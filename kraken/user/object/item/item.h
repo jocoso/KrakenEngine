@@ -2,11 +2,13 @@
 #define __Prototype__Item__H__
 
 #include "../object.h"
-#include "../person/person.h"
 
 
-class Item {
-
+class Item : public virtual Object {
+	Item();
+public:
+	Item(const char* name, const char *description) :
+		Object(name, description) {};
 };
 
 
