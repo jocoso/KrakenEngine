@@ -2,11 +2,12 @@
 #define __Prototype__Place__H__
 
 #include "../object.h"
-#include "../item/item.h"
-#include "../person/person.h"
-#include <map>
 
-class Place {
+class Place : public virtual Object {
+	Place() {};
+public:
+	Place(const char* name, const char* description) :
+		Object(name, description) {}
 	
 };
 

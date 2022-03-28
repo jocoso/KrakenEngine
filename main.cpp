@@ -6,6 +6,8 @@
 
 #include "kraken/user/object/object.h"
 #include "kraken/user/object/item/item.h"
+#include "kraken/user/object/person/person.h"
+#include "kraken/user/object/place/place.h"
 
 #include <string>
 
@@ -16,9 +18,13 @@ ProtTest pt("=== OBJECTS ===");
 void testGetters() {
 
     Item it("Item", "It is an item");
-    Object* getter_list[] = { &it };
-    const char* names[] = { "Item" };
-    int size = 1;
+    Person pe("Person", "It is a Person");
+    Place pl("Place", "It is a Place");
+
+    Object* getter_list[] = { &it, &pe, &pl };
+
+    const char* names[] = { "Item", "Person", "Place" };
+    int size = 3;
 
     for (int i = 0; i < size; i++) {
         pt.test(
@@ -33,9 +39,13 @@ void testGetters() {
 void testSetters() {
     
     Item it("Item", "It is an item");
-    Object* getter_list[] = { &it };
-    const char* names[] = { "Bell" };
-    int size = 1;
+    Person pe("Person", "It is a Person");
+    Place pl("Place", "It is a Place");
+
+    Object* getter_list[] = { &it, &pe, &pl };
+
+    const char* names[] = { "Bell", "Josh", "Spiderville" };
+    int size = 3;
 
     for (int i = 0; i < size; i++) {
         getter_list[i]->set_name(names[i]);
