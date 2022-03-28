@@ -153,6 +153,7 @@
     <ClCompile Include="kraken\user\object\object.cpp" />
     <ClCompile Include="kraken\user\object\person\person.cpp" />
     <ClCompile Include="kraken\user\object\place\place.cpp" />
+    <ClCompile Include="kraken\user\world\world.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -165,6 +166,7 @@
     <ClInclude Include="kraken\user\object\object.h" />
     <ClInclude Include="kraken\user\object\person\person.h" />
     <ClInclude Include="kraken\user\object\place\place.h" />
+    <ClInclude Include="kraken\user\world\world.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
