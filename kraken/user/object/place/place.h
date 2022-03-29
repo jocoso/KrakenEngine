@@ -4,7 +4,6 @@
 #include "../object.h"
 
 class Place : public virtual Object {
-	Place() {};
 public:
 	Place(const char* name, const char* description) :
 		Object(name, description) {}

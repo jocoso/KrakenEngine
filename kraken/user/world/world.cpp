@@ -1,5 +1,9 @@
 #include "world.h"
 
+World::World(Place *level_0, Person *protagonist) {
+	_protagonist = protagonist;
+	_current_location = level_0;
+}
 
 void World::add_object_at(Object object, Place location) {
 	std::cout << "Adding Object " << object.get_name() << " at " << location.get_name() << std::endl;
@@ -95,7 +99,9 @@ Place* World::remove_location(const char* location_name) {
 // signup
 bool World::signup(Object &obj) {
 	std::cout << "Signing " << *obj.get_name() << std::endl;
+	return false;
 }
 bool World::signup(Object &obj, ...) {
 	std::cout << "Signing Multiple " << std::endl;
+	return false;
 }

@@ -4,10 +4,9 @@
 #include "../object.h"
 
 class Person : public virtual Object {
-	Person() {}
 public:
-	Person(const char* name, const char* description)
-		: Object(name, description) {}
+	Person(const char* name, const char* description) :
+		Object(name, description) {}
 	
 };
 

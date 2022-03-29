@@ -6,7 +6,6 @@ class Object {
 	const char* _name;
 	const char* _description;
 protected:
-	Object() {}
 	Object(const char*, const char*);
 public:
 	const unsigned int get_id(void);

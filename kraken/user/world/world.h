@@ -13,11 +13,12 @@
 class World {
 	std::map<const char*, const unsigned int> registration_table;
 	ArrayList<Place> _locations;
-	Person _protagonist;
-	Place _current_location;
+	Person *_protagonist;
+	Place *_current_location;
 
 	void add_object_at(Object object, Place location);
 public:
+	World(Place *level_0, Person *protagonist);
 	// get and add locations
 	Place *get_location(const unsigned int id);
 	const unsigned int add_location(Place place);
@@ -27,8 +28,6 @@ public:
 
 	void add_item_at(const unsigned int item_id, const unsigned int location_id);
 	void add_person_at(const unsigned int person_id, const unsigned int location_id);
-	void set_item_here(Item& it);
-	void set_person_here(Person& pe);
 
 	// get and add items and people from currentLocation
 	Item *get_item_here(const char* item_name);
