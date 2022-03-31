@@ -167,6 +167,7 @@
     <ClInclude Include="kraken\user\object\person\person.h" />
     <ClInclude Include="kraken\user\object\place\place.h" />
     <ClInclude Include="kraken\user\world\world.h" />
+    <ClInclude Include="Main.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

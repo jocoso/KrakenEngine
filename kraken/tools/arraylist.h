@@ -2,11 +2,12 @@
 #define __Array__List__
 
 #include <iostream>
+#include <cstdlib>
 #define CONSTANT_INCREMENT 20
 
 
-template <typename T> class ArrayList {
-	T* _array;
+template <class T> class ArrayList {
+	T** _array = NULL;
 	unsigned int _size = 0;
 	size_t _max_size;
 
@@ -19,7 +20,7 @@ template <typename T> class ArrayList {
 
 		// Make a new array twice the size of the previous
 		size_t twice = 2 * _max_size;
-		T* new_array = (T*)malloc(twice * sizeof(T));
+		T** new_array = (T**) std::malloc(twice * sizeof(T*));
 
 		// Copy everything on one array into the other
 		std::copy(_array, _array + _max_size, new_array);
@@ -35,8 +36,7 @@ template <typename T> class ArrayList {
 
 public:
 	ArrayList() {
-		_array = (T *)malloc(CONSTANT_INCREMENT * sizeof(T));
-		_size = 0;
+		_array = (T**) std::calloc(CONSTANT_INCREMENT, sizeof(T*));
 		_max_size = CONSTANT_INCREMENT;
 	}
 
@@ -45,11 +45,13 @@ public:
 	}
 
 	void insert(T obj) {
-		std::cout << "Inserting " << obj << std::endl;
-		
 		if (is_full()) resize();
-			
-		_array[_size] = obj;
+		
+		if (_array == NULL) {
+			throw std::overflow_error("NULL::ARRAY");
+		}
+
+		_array[_size] = &obj;
 		++_size;
 	}
 	void replace(unsigned int idx, T obj) {
@@ -59,16 +61,18 @@ public:
 			std::cout << "ERROR: No Valid Value For Index " << idx << std::endl;
 			return;
 		}
-		_array[idx] = obj;
+		_array[idx] = &obj;
 
 	}
 
 	T get(unsigned int idx) {
 		std::cout << "Getting item at index " << idx << std::endl;
+		if (_array == NULL) {
+			std::cout << "ARRAY IS NULL" << std::endl;
+			throw std::overflow_error("NULL::ARRAY");
+		}
 
-		if (idx > _size) return NULL;
-		else return _array[idx];
-
+		return *_array[idx];
 	}
 
 	T remove(unsigned int idx) {
@@ -76,16 +80,16 @@ public:
 
 		if (idx > _size) return NULL;
 
-		T item = _array[idx];
+		T *item = _array[idx];
 		--_size;
 
-		return item;
+		return *item;
 	}
 
 	void reset() {
 		std::cout << "Resetting instance... " << std::endl;
 		delete[] _array;
-		_array = (T*)malloc(CONSTANT_INCREMENT * sizeof(T));
+		_array = (T**)malloc(CONSTANT_INCREMENT * sizeof(T*));
 		_max_size = CONSTANT_INCREMENT;
 		_size = 0;
 	}

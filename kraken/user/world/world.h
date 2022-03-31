@@ -11,32 +11,43 @@
 #include <iostream>
 
 class World {
-	std::map<const char*, const unsigned int> registration_table;
+	std::map<const char*, const unsigned int> _registration_table;
+	//std::map<const char*, const unsigned int>::iterator _registaration_iterator;
 	ArrayList<Place> _locations;
-	Person *_protagonist;
-	Place *_current_location;
+	Person *_protagonist = NULL;
+	Place *_current_location = NULL;
+	unsigned int _locations_size = 0;
 
 	void add_object_at(Object object, Place location);
 public:
-	World(Place *level_0, Person *protagonist);
-	// get and add locations
-	Place *get_location(const unsigned int id);
+	World(Place level_0, Person protagonist);
+	World(Person protagonist, Place level_0);
+
+	// Current Location
+	void set_current_location(Place place);
+	Place* get_current_location();
+
+
+	// Getting and Adding Location
+	Place get_location(const unsigned int place_id);
+	Place get_location(const char* place_name);
 	const unsigned int add_location(Place place);
-	// get and add items and people to locations
-	Item *get_item_at(const char *item_name, const char *location_name);
-	Person *get_person_at(const char* person_name, const char* location_name);
 
-	void add_item_at(const unsigned int item_id, const unsigned int location_id);
-	void add_person_at(const unsigned int person_id, const unsigned int location_id);
-
-	// get and add items and people from currentLocation
-	Item *get_item_here(const char* item_name);
+	// get and add items
+		// Current Location
+	Item* get_item_here(const char* item_name);
 	const unsigned int set_item_here(Item it);
+		// At given location
+	Item *get_item_at(const char *item_name, const char *location_name);
+	void add_item_at(const unsigned int item_id, const unsigned int location_id);
+	
+
+	// get and add people
 	const unsigned int set_person_here(Person pe);
 	Person *get_person_here(const char* person_name);
-	void set_current_location(Place place);
-	void set_current_location(const char * place_name);
-	void set_current_location(const unsigned int place_id);
+	void add_person_at(const unsigned int person_id, const unsigned int location_id);
+	Person* get_person_at(const char* person_name, const char* location_name);
+	
 
 	// get and set current protagonist
 	Person *get_protagonist(void);

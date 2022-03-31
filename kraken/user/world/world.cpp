@@ -1,25 +1,62 @@
 #include "world.h"
 
-World::World(Place *level_0, Person *protagonist) {
-	_protagonist = protagonist;
-	_current_location = level_0;
+
+World::World(Place level_0, Person protagonist) {
+	_protagonist = &protagonist;
+	_current_location = &level_0;
+}
+
+World::World(Person protagonist, Place level_0) {
+	_protagonist = &protagonist;
+	_current_location = &level_0;
 }
 
 void World::add_object_at(Object object, Place location) {
 	std::cout << "Adding Object " << object.get_name() << " at " << location.get_name() << std::endl;
 }
+
+// Current Location
+void World::set_current_location(Place place) {
+	_current_location = &place;
+}
+Place* World::get_current_location() {
+	return _current_location;
+}
+
 // get and add locations
-Place* World::get_location(const unsigned int id) {
-	std::cout << "Getting location id " << id << std::endl;
-
-	return NULL;
-}
-
 const unsigned int World::add_location(Place place) {
-	std::cout << "Adding " << place.get_name() << " To location list";
+	// give an id to the place.
+	// XXX: Breaks the rules of encapsulation
+	place._id = this->_locations_size;
+	++_locations_size;
 
-	return 0;
+	// maps location name with index
+	_registration_table.insert(
+		std::pair<const char*, const unsigned int>
+		(place.get_name(), place.get_id()));
+
+	_locations.insert(place);
+
+	// add place to the list of places
+	return place.get_id();
 }
+Place World::get_location(const unsigned int location_id) {
+	return _locations.get(location_id);
+}
+Place World::get_location(const char* location_name) {
+	int id = -1;
+
+	// Find if object name is registered
+	if (_registration_table.count(location_name))
+		id = _registration_table[location_name];
+
+	// No? return null, otherwise make a pointer and return it
+	if (id < 0) throw std::out_of_range("OUT::OF::BOUNDS");
+	else {
+		return this->get_location(id);
+	}
+}
+
 
 // get and add items and people to locations
 Item* World::get_item_at(const char* item_name, const char* location_name) {
@@ -58,16 +95,6 @@ const unsigned int World::set_person_here(Person pe) {
 Person* World::get_person_here(const char* person_name) {
 	std::cout << "Getting person " << person_name << " at current location" << std::endl;
 	return NULL;
-}
-
-void World::set_current_location(Place place) {
-	std::cout << "Current location is now " << place.get_name() << std::endl;
-}
-void World::set_current_location(const char* place_name) {
-	std::cout << "Current location is now " << place_name << std::endl;
-}
-void World::set_current_location(const unsigned int place_id) {
-	std::cout << "Current location is now the one found at id " << place_id << std::endl;
 }
 
 // get and set current protagonist
