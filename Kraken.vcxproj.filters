@@ -18,66 +18,48 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kraken\controller\controller.cpp">
+    <ClCompile Include="krakenLib\controller.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kraken\tools\protstring.cpp">
+    <ClCompile Include="krakenLib\components\item.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kraken\tools\prottest.cpp">
+    <ClCompile Include="krakenLib\components\person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kraken\console\console.cpp">
+    <ClCompile Include="krakenLib\components\place.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kraken\user\object\object.cpp">
+    <ClCompile Include="krakenLib\ioconsole.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kraken\user\object\item\item.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kraken\user\object\person\person.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kraken\user\object\place\place.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="kraken\user\world\world.cpp">
+    <ClCompile Include="krakenLib\components\chapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="kraken\controller\controller.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\tools\protstring.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\tools\prottest.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\console\console.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\tools\arraylist.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\user\object\object.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\user\object\item\item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\user\object\person\person.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\user\object\place\place.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="kraken\user\world\world.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\controller.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\components\item.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\components\person.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\components\place.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\ioconsole.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\iouser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\components\chapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
