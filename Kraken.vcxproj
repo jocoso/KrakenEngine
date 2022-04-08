@@ -152,6 +152,9 @@
     <ClCompile Include="krakenLib\controller.cpp" />
     <ClCompile Include="krakenLib\ioconsole.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="test\controllertest.cpp" />
+    <ClCompile Include="tools\protstring.cpp" />
+    <ClCompile Include="tools\prottest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="krakenLib\components\chapter.h" />
@@ -162,6 +165,10 @@
     <ClInclude Include="krakenLib\ioconsole.h" />
     <ClInclude Include="krakenLib\iouser.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="test\controllertest.h" />
+    <ClInclude Include="tools\arraylist.h" />
+    <ClInclude Include="tools\protstring.h" />
+    <ClInclude Include="tools\prottest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

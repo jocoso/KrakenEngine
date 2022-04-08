@@ -3,7 +3,8 @@
 
 class IOUser {
 public:
-	virtual void println(const char* text) const = 0;
+	virtual void println(const char* text) = 0;
+	virtual void print(const char* text) = 0;
 };
 
 #endif

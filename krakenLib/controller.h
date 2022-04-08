@@ -4,6 +4,7 @@
 #include "../tools/arraylist.h"
 #include "components/chapter.h"
 #include "iouser.h"
+#include "ioconsole.h"
 
 class Controller {
 
@@ -16,6 +17,7 @@ class Controller {
 public:
 
 	Controller();
+	~Controller();
 
 	// title
 	const char* get_title(void);

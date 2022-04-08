@@ -2,11 +2,17 @@
 #include "ioconsole.h"
 
 void Controller::presentation(void) {
-	
+	console->println("Hello World");
 }
 
 
-Controller::Controller() {}
+Controller::Controller() {
+	console = new IOConsole();
+}
+
+Controller::~Controller() {
+	
+}
 
 // title
 const char* Controller::get_title(void) {
@@ -27,4 +33,6 @@ void Controller::set_intro(const char* intro) {
 }
 
 // run
-void Controller::run(void) {}
+void Controller::run(void) {
+	presentation();
+}

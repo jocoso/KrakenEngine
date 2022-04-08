@@ -1,5 +1,6 @@
-﻿  controller.cpp
+﻿  Main.cpp
+  controller.cpp
   ioconsole.cpp
-  Main.cpp
+  controllertest.cpp
   Generating Code...
   Kraken.vcxproj -> C:\Users\Joshua\Desktop\programming\C++\Kraken\x64\Debug\Kraken.exe
