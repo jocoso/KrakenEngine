@@ -2,7 +2,8 @@
 #define _IO_USER_H_
 
 class IOUser {
-
+public:
+	virtual void println(const char* text) const = 0;
 };
 
 #endif

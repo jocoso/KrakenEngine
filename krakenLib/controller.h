@@ -9,7 +9,7 @@ class Controller {
 
 	const char* title;
 	const char* intro;
-	IOUser console;
+	IOUser *console;
 
 	void presentation(void);
 
