@@ -2,12 +2,15 @@
 #include "ioconsole.h"
 
 void Controller::presentation(void) {
-	console->println("Hello World");
-}
+	bool is_waiting = true;
 
+	console->println(this->get_title());
+	console->wait_for("\n[Press Enter To Continue]", '\n');
+}
 
 Controller::Controller() {
 	console = new IOConsole();
+	caret = "=>";
 }
 
 Controller::~Controller() {
@@ -35,4 +38,13 @@ void Controller::set_intro(const char* intro) {
 // run
 void Controller::run(void) {
 	presentation();
+}
+
+// caret
+void Controller::set_caret(const char* caret) {
+	this->caret = caret;
+}
+
+const char* Controller::ask_for_input(const char *prompt) {
+	return this->console->get_input(prompt, caret);
 }

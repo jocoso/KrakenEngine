@@ -17,6 +17,7 @@ public:
 	~ControllerTest();
 	void test_set_get_title();
 	void test_run();
+	void test_input();
 	void run();
 
 };

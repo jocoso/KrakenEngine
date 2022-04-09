@@ -10,6 +10,7 @@ class Controller {
 
 	const char* title;
 	const char* intro;
+	const char* caret;
 	IOUser *console;
 
 	void presentation(void);
@@ -26,6 +27,10 @@ public:
 	// intro
 	const char* get_intro(void);
 	void set_intro(const char* intro);
+
+	// caret
+	void set_caret(const char* caret);
+	const char *ask_for_input(const char *prompt);
 
 	// run
 	void run(void);
