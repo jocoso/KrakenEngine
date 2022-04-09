@@ -4,12 +4,13 @@
 
 #include "../krakenLib/controller.h"
 #include "../tools/prottest.h"
+#include <memory>
 
 
 class ControllerTest {
 
-	Controller controller;
-	ProtTest *pt;
+	Controller controller{};
+	ProtTest* pt{};
 
 public:
 

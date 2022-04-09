@@ -164,7 +164,6 @@
     <ClInclude Include="krakenLib\controller.h" />
     <ClInclude Include="krakenLib\ioconsole.h" />
     <ClInclude Include="krakenLib\iouser.h" />
-    <ClInclude Include="Main.h" />
     <ClInclude Include="test\controllertest.h" />
     <ClInclude Include="tools\arraylist.h" />
     <ClInclude Include="tools\protstring.h" />
