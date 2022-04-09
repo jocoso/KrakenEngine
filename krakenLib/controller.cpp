@@ -46,5 +46,6 @@ void Controller::set_caret(const char* caret) {
 }
 
 const char* Controller::ask_for_input(const char *prompt) {
-	return this->console->get_input(prompt, caret);
+	const char * a = this->console->get_input(prompt, caret);
+	return a;
 }

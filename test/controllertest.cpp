@@ -23,8 +23,11 @@ void ControllerTest::test_run() {
 }
 
 void ControllerTest::test_input() {
-	const char *say_hi = controller.ask_for_input("Say hi");
-	pt->test("Greet Back", strcmp(say_hi, "hi"));
+	const char* say_hi = controller.ask_for_input("Say hi");
+
+	pt->test("Greet Back", strcmp(say_hi, "hi") == 0);
+
+	puts(say_hi);
 }
 
 void ControllerTest::run() {
@@ -32,6 +35,6 @@ void ControllerTest::run() {
 	test_run();
 	test_input();
 
-	pt->summary();
+	pt->report();
 }
 

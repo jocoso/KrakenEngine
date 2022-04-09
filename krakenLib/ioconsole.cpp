@@ -26,9 +26,10 @@ const char *IOConsole::get_input(const char *prompt, const char* caret) {
 	
 	println(prompt);
 	print(caret);
-	std::string a;
+	// XXX: FIX THIS
+	char a[500];
 
-	std::cin >> a;
+	std::cin.get(a, 500);
 
-	return a.c_str();
+	return a;
 }
