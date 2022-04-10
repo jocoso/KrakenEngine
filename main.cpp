@@ -1,13 +1,14 @@
 #include <iostream>
 #include <string>
-#include "test/controllertest.h"
+#include "test/daotest.h"
+
+// Function Tests: All the posible user verbs.
 
 
-// Testing for now.
 int main(void) {
-   
-    ControllerTest t;
-    t.run();
+
+    DaoTest dt;
+    dt.run();
 
     return 0;
 }

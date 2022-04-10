@@ -19,6 +19,7 @@ public:
 	void test_set_get_title();
 	void test_run();
 	void test_input();
+	void test_incorrect_input();
 	void run();
 
 };

@@ -1,6 +1,2 @@
-﻿  controller.cpp
-  ioconsole.cpp
-  controllertest.cpp
-  Generating Code...
-C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\krakenLib\ioconsole.cpp(55): warning C4172: returning address of local variable or temporary: a
+﻿  daotest.cpp
   Kraken.vcxproj -> C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\x64\Debug\Kraken.exe

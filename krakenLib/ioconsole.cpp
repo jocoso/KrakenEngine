@@ -23,6 +23,8 @@
 
 #include "ioconsole.h"
 
+#define MAX_INPUT 700
+
 IOConsole::IOConsole() {
 	// Initialize in the future
 }
@@ -45,9 +47,8 @@ const char *IOConsole::get_input(const char *prompt, const char* caret) {
 	println(prompt);
 	print(caret);
 	// XXX: FIX THIS
-	char a[500];			// XXX: Replace for custom made string
-	std::cin.get(a, 500);	// XXX: Pre-scream -> Code -> Cry -> Wash -> Rinse -> Repeat.
-							// XXX: Infinite loop of life.
-
-	return a;
+	char input[MAX_INPUT] = {};	// XXX: Replace for custom made string
+	std::cin >> input;		    // XXX: Pre-scream -> Code -> Cry -> Wash -> Rinse -> Repeat.					
+							    // XXX: Infinite loop of life.
+	return input;
 }

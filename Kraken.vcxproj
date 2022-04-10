@@ -150,9 +150,11 @@
     <ClCompile Include="krakenLib\components\person.cpp" />
     <ClCompile Include="krakenLib\components\place.cpp" />
     <ClCompile Include="krakenLib\controller.cpp" />
+    <ClCompile Include="krakenLib\daoimpl.cpp" />
     <ClCompile Include="krakenLib\ioconsole.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="test\controllertest.cpp" />
+    <ClCompile Include="test\daotest.cpp" />
     <ClCompile Include="tools\protstring.cpp" />
     <ClCompile Include="tools\prottest.cpp" />
   </ItemGroup>
@@ -162,9 +164,12 @@
     <ClInclude Include="krakenLib\components\person.h" />
     <ClInclude Include="krakenLib\components\place.h" />
     <ClInclude Include="krakenLib\controller.h" />
+    <ClInclude Include="krakenLib\dao.h" />
+    <ClInclude Include="krakenLib\daoimpl.h" />
     <ClInclude Include="krakenLib\ioconsole.h" />
     <ClInclude Include="krakenLib\iouser.h" />
     <ClInclude Include="test\controllertest.h" />
+    <ClInclude Include="test\daotest.h" />
     <ClInclude Include="tools\arraylist.h" />
     <ClInclude Include="tools\protstring.h" />
     <ClInclude Include="tools\prottest.h" />

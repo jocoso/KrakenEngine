@@ -27,6 +27,7 @@
 #include <cstdio>
 #include <iostream>
 #include "iouser.h"
+#include "../tools/protstring.h"
 
 
 class IOConsole : virtual public IOUser {

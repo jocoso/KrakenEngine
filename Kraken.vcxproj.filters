@@ -45,6 +45,12 @@
     <ClCompile Include="tools\prottest.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="krakenLib\daoimpl.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="test\daotest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="krakenLib\controller.h">
@@ -78,6 +84,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="tools\prottest.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\daoimpl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="krakenLib\dao.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="test\daotest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
