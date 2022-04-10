@@ -1,6 +1,5 @@
 #include "daotest.h"
 
-
 DaoTest::DaoTest() {
 
 	pt = new ProtTest("=== DAO TEST ===");
