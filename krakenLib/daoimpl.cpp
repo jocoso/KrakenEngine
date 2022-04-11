@@ -46,9 +46,7 @@ void DaoImpl::write(void) {
 
 const unsigned int DaoImpl::add_chapter(Chapter c) {
 
-	c.id = size;
-	chapters.insert(c);
-	return c.id;
+	return 0;
 
 }
 

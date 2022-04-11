@@ -1,2 +1,9 @@
-﻿  daotest.cpp
+﻿  chapter.cpp
+  controller.cpp
+  daoimpl.cpp
+  Main.cpp
+  arraylist_test.cpp
+  controllertest.cpp
+  Generating Code...
+C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\krakenLib\daoimpl.cpp(56): warning C4172: returning address of local variable or temporary: ch
   Kraken.vcxproj -> C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\x64\Debug\Kraken.exe

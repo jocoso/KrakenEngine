@@ -48,7 +48,7 @@
     <ClCompile Include="krakenLib\daoimpl.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="test\daotest.cpp">
+    <ClCompile Include="test\arraylist_test.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -92,7 +92,7 @@
     <ClInclude Include="krakenLib\dao.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="test\daotest.h">
+    <ClInclude Include="test\arraylist_test.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

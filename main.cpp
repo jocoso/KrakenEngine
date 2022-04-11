@@ -1,14 +1,14 @@
 #include <iostream>
 #include <string>
-#include "test/daotest.h"
+#include "test/arraylist_test.h"
 
 // Function Tests: All the posible user verbs.
 
 
 int main(void) {
 
-    DaoTest dt;
-    dt.run();
+    ArrayListTest t;
+    t.run();
 
     return 0;
 }
