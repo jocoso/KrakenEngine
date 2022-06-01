@@ -31,7 +31,7 @@ class Dao:
 
     def move(self, to):
         self.currentplace = to
-        self.get_current_place.get_description()
+        self.get_current_place().get_description()
 
     def turn_off(self):
         self.awake = False

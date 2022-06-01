@@ -39,7 +39,7 @@ class Place(Object):
     def get_adjacent(self, coordinate):
         index = self.coordinates.get(coordinate, -1)
 
-        return self.adjacentplaces[index] if index > 0 else None
+        return self.adjacentplaces[index] if index > 0 else -1
 
     def add_adjacent(self, data):
         if(isinstance(data, list)): 
