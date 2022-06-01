@@ -10,3 +10,5 @@ Kraken as a software looks to create a way to:
 - It is perfect for people who wants to play a tabletop game but does not have people to play. 
 - Want to write their own creative stories and roleplay as the main character.
 - Wants to test and write game lore and mechanics prototypes before creating using a game engine.
+
+![canvas_main-220601_0500](https://user-images.githubusercontent.com/11726211/171335054-69bec792-57f1-478f-9e43-03472f54a6bd.png)
