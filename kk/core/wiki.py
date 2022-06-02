@@ -1,7 +1,9 @@
+from abc import ABC
 
-class Wiki:
+
+class Wiki(ABC):
     def __init__(self, data = None):
-        self.data = dict() if data == None else data
+        self.data = {} if data == None else data
 
     def search(self, searchkey : str):
         if searchkey in self.data:
