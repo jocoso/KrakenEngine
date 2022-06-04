@@ -17,3 +17,19 @@ class OutputManager:
                 print("Incorrect input value")
         
         return number
+
+    # TODO make case-agnostic
+    def ask_choice(self, ask:str, choices:list, wronginput:str="Wrong Input"):
+        output = ""
+        input = ""
+        done = False
+
+        while not done:
+            input = self.ask_user_input(ask)
+            if input in choices:
+                output = input
+                done = True
+            else:
+                print(wronginput)
+
+        return output
