@@ -1,8 +1,0 @@
-README.md
-setup.py
-kk/__init__.py
-kk/runner.py
-kraken.egg-info/PKG-INFO
-kraken.egg-info/SOURCES.txt
-kraken.egg-info/dependency_links.txt
-kraken.egg-info/top_level.txt
