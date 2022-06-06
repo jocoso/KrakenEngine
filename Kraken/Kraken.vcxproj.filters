@@ -21,10 +21,19 @@
     <ClCompile Include="kk\core\kkRunner.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="kk\core\kkOutputManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="kk\core\kkRunner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="kk\core\kkOutputManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="kk\tools\fonts\ao.ttf" />
   </ItemGroup>
 </Project>

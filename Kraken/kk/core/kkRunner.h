@@ -1,7 +1,9 @@
 #pragma once
 
 #include <string>
-#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+
+#include "kkOutputManager.h"
 
 #ifndef __KK_RUNNER_H__
 #define __KK_RUNNER_H__
@@ -12,10 +14,10 @@ public:
 	kkRunner(int height, int width, std::string title);
 	~kkRunner();
 private:
-	sf::Window window;
+	sf::RenderWindow window;
 	sf::Event event;
 public:
-	void run();
+	void run(kkOutputManager *outman);
 };
 
-#endif
+#endif // define(__KK_RUNNER_H__)
