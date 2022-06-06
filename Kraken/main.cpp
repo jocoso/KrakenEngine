@@ -1,16 +1,10 @@
 #include <iostream>
-#include <SFML\Graphics.hpp>
+
+#include "kk/core/kkRunner.h"
 
 int main(void) {
-	sf::RenderWindow window(sf::VideoMode(300, 800), "yea");
-	sf::Event event;
+	kkRunner runner(200, 100, "Trial 1");
+	runner.run();
 
-	while (window.isOpen()) {
-		while (window.pollEvent(event)) {
-			if (event.type == sf::Event::Closed) {
-				window.close();
-			}
-		}
-	}
 	return 0;
 }
