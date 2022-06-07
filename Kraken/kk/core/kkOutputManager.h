@@ -21,7 +21,7 @@ private:
 public:
 	std::string askUserInput(sf::RenderWindow *win, std::string what);
 	int askUserNumericInput(sf::RenderWindow *win, std::string what);
-	void print(sf::RenderWindow *win, std::string what);
+	void print(sf::RenderWindow *win, std::string what, float x = 0.0f, float y = 0.0f);
 
 };
 

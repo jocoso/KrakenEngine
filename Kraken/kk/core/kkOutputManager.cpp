@@ -47,7 +47,7 @@ int kkOutputManager::askUserNumericInput(sf::RenderWindow *win, std::string what
 	@param win: The window we are writing in
 	@param what: What to write on the screen
 */
-void kkOutputManager::print(sf::RenderWindow *win, std::string what) {
+void kkOutputManager::print(sf::RenderWindow *win, std::string what, float x, float y) {
 	sf::Text text;
 	// Select the font
 	text.setFont(font);
@@ -59,6 +59,7 @@ void kkOutputManager::print(sf::RenderWindow *win, std::string what) {
 	text.setFillColor(sf::Color::Red);
 	// Set Style
 	text.setStyle(sf::Text::Bold);
+	text.setPosition(sf::Vector2f(x, y));
 
 	// Draw
 	win->draw(text);
