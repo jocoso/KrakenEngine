@@ -1,7 +1,10 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <iostream>
 #include <string>
+
+#include <experimental/filesystem>
 
 #ifndef __KK_OUTMAN_H__
 #define __KK_OUTMAN_H__

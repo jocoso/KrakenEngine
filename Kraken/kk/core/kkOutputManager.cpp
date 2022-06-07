@@ -1,5 +1,4 @@
 #include "kkOutputManager.h"
-
 /**
 	CS-11 Controls the input and output of 
 	terminal windows.
@@ -8,10 +7,14 @@
 	@version 1.1 6/6/22
 */
 
+namespace fs = std::experimental::filesystem;
 // Constructor and Destructor
 kkOutputManager::kkOutputManager() {
 	// Loading font
-	if (!font.loadFromFile("C:\\Users\\Josh\\Desktop\\Programming\\Kraken\\Kraken\\kk\\tools\\fonts\\ao.ttf")) {
+	fs::path cwd = fs::current_path() / "kk/tools/fonts/ao.ttf";
+	std::string dir = cwd.string();
+
+	if (!font.loadFromFile(dir)) {
 		throw "Couldn't Load Font.";
 	}
 }
@@ -48,20 +51,16 @@ void kkOutputManager::print(sf::RenderWindow *win, std::string what) {
 	sf::Text text;
 	// Select the font
 	text.setFont(font);
-
 	// Set the string to display
 	text.setString(what);
-
 	// Set size
-	text.setCharacterSize(200);
-
+	text.setCharacterSize(40);
 	// Set Color
 	text.setFillColor(sf::Color::Red);
-
+	// Set Style
 	text.setStyle(sf::Text::Bold);
 
-
-
+	// Draw
 	win->draw(text);
 
 }
