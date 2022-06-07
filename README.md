@@ -12,3 +12,8 @@ Kraken as a software looks to create a way to:
 - Wants to test and write game lore and mechanics prototypes before creating using a game engine.
 
 ![canvas_main-220601_0500](https://user-images.githubusercontent.com/11726211/171335054-69bec792-57f1-478f-9e43-03472f54a6bd.png)
+
+
+
+https://user-images.githubusercontent.com/11726211/172458268-a21b0a83-436e-4c67-8043-48ce7c767ee5.mp4
+
