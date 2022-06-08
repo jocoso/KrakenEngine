@@ -1,7 +1,7 @@
 ﻿  kkRunner.cpp
-c:\users\jocoso2218\desktop\programming\python\kraken\kraken\kk\core\kkrunner.cpp(64): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
+c:\users\jocoso2218\desktop\programming\c\kraken\kraken\kk\core\kkrunner.cpp(89): warning C4244: 'argumento': conversión de 'T' a 'float'; posible pérdida de datos
           with
           [
               T=unsigned int
           ]
-  Kraken.vcxproj -> C:\Users\Jocoso2218\Desktop\Programming\Python\kraken\Debug\Kraken.exe
+  Kraken.vcxproj -> C:\Users\Jocoso2218\Desktop\Programming\C\kraken\Debug\Kraken.exe

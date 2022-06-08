@@ -19,12 +19,14 @@ private:
 	sf::Event event;
 	std::list<std::string> log;
 	std::list<std::string>::iterator it;
-	std::string txt;
+	std::string input;
 public:
 	void run(kkOutputManager *outman);
 private:
 	void event_handler(kkOutputManager *outman);
 	void enter_handler(kkOutputManager *outman);
+	void input_handler(sf::Uint32 unicode);
+	void delete_handler(void);
 };
 
 #endif // define(__KK_RUNNER_H__)
