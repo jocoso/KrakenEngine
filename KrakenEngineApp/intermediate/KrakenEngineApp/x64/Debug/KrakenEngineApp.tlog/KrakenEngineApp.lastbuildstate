@@ -1,2 +1,7 @@
+<<<<<<< HEAD:KrakenEngineApp/intermediate/KrakenEngineApp/x64/Debug/KrakenEngineApp.tlog/KrakenEngineApp.lastbuildstate
 #TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.19041.0
 Debug|x64|C:\Users\Josh\Desktop\Programming\KrakenEngine\|
+=======
+#TargetFrameworkVersion=v4.0:PlatformToolSet=v141:EnableManagedIncrementalBuild=false:VCToolArchitecture=Native32Bit:WindowsTargetPlatformVersion=10.0.17763.0
+Debug|Win32|C:\Users\Jocoso2218\Desktop\Programming\C\kraken\|
+>>>>>>> 4d0675416e0de27198cb48f621aeedb3121c44d5:Kraken/Debug/Kraken.tlog/Kraken.lastbuildstate
