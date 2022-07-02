@@ -1,6 +1,5 @@
 #pragma once
 
-
 #include <KrakenEngine/App/KRApplication.h>
 
 class ExampleApp : public kraken::KRApplication {
