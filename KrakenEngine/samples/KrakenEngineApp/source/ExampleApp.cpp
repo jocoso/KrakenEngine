@@ -15,3 +15,8 @@ void ExampleApp::onInit()
 void ExampleApp::onStop()
 {
 }
+
+void ExampleApp::onUpdate() {
+	stop();
+}
+

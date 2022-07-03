@@ -1,4 +1,4 @@
-#include "KrakenEngine/App/KRApplication.h"
+#include <Kraken/App/KRApplication.h>
 #include <stdexcept>
 
 using namespace kraken;
@@ -6,14 +6,13 @@ using namespace kraken;
 KRApplication* KRApplication::m_instance = nullptr;
 
 kraken::KRApplication::KRApplication() {
-	if (!m_instance) 
-		m_instance = this;
-	else 
-		throw std::runtime_error("A Kraken Application was already created.");
+	KRASSERT(!m_instance);
+	m_instance = this;
+	m_engine = kraken::CreateKrakenEngine();
 }
 
-kraken::KRApplication::~KRApplication()
-{
+kraken::KRApplication::~KRApplication() {
+	m_engine->release();
 }
 
 void kraken::KRApplication::run() {
@@ -21,7 +20,7 @@ void kraken::KRApplication::run() {
 
 	while (m_isRunning) {
 
-
+		onUpdate();
 
 	}
 
@@ -32,7 +31,7 @@ void kraken::KRApplication::stop() {
 	m_isRunning = false;
 }
 
-KRApplication* kraken::KRApplication::get()
-{
+KRApplication* kraken::KRApplication::get() {
+	KRASSERT(m_instance);
 	return m_instance;
 }

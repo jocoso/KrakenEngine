@@ -1,5 +1,6 @@
 #pragma once
-#include "KrakenEngine/Core/KRCommon.h"
+#include <Kraken/Core/KRCommon.h>
+#include <Kraken/Engine/KrakenEngine.h>
 
 namespace kraken {
 
@@ -10,6 +11,7 @@ namespace kraken {
 
 		virtual void onInit() {};
 		virtual void onStop() {};
+		virtual void onUpdate() {};
 
 		void run();
 		void stop();
@@ -21,5 +23,6 @@ namespace kraken {
 		static KRApplication* m_instance;
 	private:
 		bool m_isRunning = true;
+		KrakenEngine *m_engine = nullptr;
 	};
 }

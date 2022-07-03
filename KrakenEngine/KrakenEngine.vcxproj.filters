@@ -15,15 +15,24 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\KrakenEngine\App\KRApplication.h">
+    <ClCompile Include="include\Kraken\App\KRApplication.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\App\KRApplication.cpp">
+    <ClCompile Include="source\Kraken\App\KRApplication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Kraken\Engine\CEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\KrakenEngine\Core\KRCommon.h">
+    <ClInclude Include="include\Kraken\Core\KRCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kraken\Engine\KrakenEngine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Kraken\Engine\CEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
