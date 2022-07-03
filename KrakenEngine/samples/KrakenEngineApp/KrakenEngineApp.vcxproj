@@ -74,7 +74,7 @@
     <OutDir>$(SolutionDir)bin\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)intermediate\$(ProjectName)\$(Platform)\$(Configuration)\</IntDir>
     <IncludePath>../../include/;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\bin\x64\Debug;$(DirectoryName)bin/$(Platform)/$(Configuration)/;$(LibraryPath)</LibraryPath>
+    <LibraryPath>../../../bin/$(Platform)/$(Configuration)/;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
