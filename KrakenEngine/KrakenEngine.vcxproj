@@ -129,14 +129,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Kraken\Engine\CScene.cpp" />
+    <ClCompile Include="source\Kraken\Engine\CFactory.cpp" />
     <ClCompile Include="source\Kraken\Engine\CEngine.cpp" />
     <ClCompile Include="source\Kraken\App\KRApplication.cpp" />
     <ClCompile Include="include\Kraken\App\KRApplication.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Kraken\Engine\CScene.h" />
+    <ClInclude Include="source\Kraken\Engine\CFactory.h" />
+    <ClInclude Include="include\Kraken\Core\KRBase.h" />
+    <ClInclude Include="include\Kraken\Engine\KRScene.h" />
     <ClInclude Include="source\Kraken\Engine\CEngine.h" />
     <ClInclude Include="include\Kraken\Engine\KrakenEngine.h" />
     <ClInclude Include="include\Kraken\Core\KRCommon.h" />
+    <ClInclude Include="source\Kraken\Engine\CTemplateFactory.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

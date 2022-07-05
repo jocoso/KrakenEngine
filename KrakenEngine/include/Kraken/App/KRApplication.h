@@ -16,6 +16,7 @@ namespace kraken {
 		void run();
 		void stop();
 
+		KrakenEngine* getEngine();
 	public:
 		static KRApplication* get();
 

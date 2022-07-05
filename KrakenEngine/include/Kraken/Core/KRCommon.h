@@ -17,3 +17,9 @@
 }
 
 #endif
+
+namespace kraken
+{
+	class KRScene;
+	typedef unsigned int ui32;
+}

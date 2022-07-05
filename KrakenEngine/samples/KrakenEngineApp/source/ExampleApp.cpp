@@ -1,4 +1,5 @@
 #include "ExampleApp.h"
+#include <Kraken/Engine/KRScene.h>
 
 ExampleApp::ExampleApp()
 {
@@ -17,6 +18,9 @@ void ExampleApp::onStop()
 }
 
 void ExampleApp::onUpdate() {
-	stop();
+	auto scene = getEngine()->createScene();
+	scene->release();
+
+	this->stop();
 }
 
