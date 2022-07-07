@@ -21,7 +21,10 @@ EVEN IF ADVISED OF THE POSIBILITY OF SUCH DAMAGE.
 #include "ExampleApp.h"
 
 int main() {
+
 	ExampleApp app;
 	app.run();
+
 	return 0;
+
 }

@@ -15,63 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="include\Kraken\App\KRApplication.h">
+    <ClCompile Include="include\Kraken\Application\KRApplication.h">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Kraken\App\KRApplication.cpp">
+    <ClCompile Include="source\Kraken\Application\KRApplication.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\CEngine.cpp">
+    <ClCompile Include="source\Kraken\Engine\BaseEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\CFactory.cpp">
+    <ClCompile Include="source\Kraken\Engine\BaseFactory.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\CScene.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\CEntity.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\CEntityComponentManager.cpp">
+    <ClCompile Include="source\Kraken\Engine\BaseChapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\Kraken\Core\KRCommon.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="include\Kraken\Engine\KrakenEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\CEngine.h">
+    <ClInclude Include="include\Kraken\Core\KRCommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Kraken\Engine\BaseEngine.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\Kraken\Core\KRBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\Kraken\Engine\KRScene.h">
+    <ClInclude Include="include\Kraken\Engine\KRChapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\CFactory.h">
+    <ClInclude Include="source\Kraken\Engine\BaseFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\CScene.h">
+    <ClInclude Include="source\Kraken\Engine\BaseTemplateFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\CTemplateFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Kraken\Engine\KREntity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\CEntity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\CEntityComponentManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Kraken\Engine\KREntityComponentManager.h">
+    <ClInclude Include="source\Kraken\Engine\BaseChapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

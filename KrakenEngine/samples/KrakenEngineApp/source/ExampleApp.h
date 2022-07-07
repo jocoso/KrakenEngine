@@ -1,8 +1,9 @@
 #pragma once
 
-#include <Kraken/App/KRApplication.h>
+#include <Kraken/Application/KRApplication.h>
 
 class ExampleApp : public kraken::KRApplication {
+
 public:
 	ExampleApp();
 	~ExampleApp();

@@ -1,5 +1,5 @@
 #include "ExampleApp.h"
-#include <Kraken/Engine/KRScene.h>
+#include <Kraken/Engine/KRChapter.h>
 
 ExampleApp::ExampleApp()
 {
@@ -18,15 +18,8 @@ void ExampleApp::onStop()
 }
 
 void ExampleApp::onUpdate() {
-	auto scene = getEngine()->createScene();
-
-	auto entity = scene->createEntity();
-	auto entity2 = scene->createEntity();
-
-	entity->release();
-	entity2->release();
-
-	scene->release();
+	auto chapter = getEngine()->createChapter();
+	chapter->release();
 
 	this->stop();
 }

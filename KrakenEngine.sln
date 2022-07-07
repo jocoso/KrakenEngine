@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.2017
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KrakenEngine", "KrakenEngine\KrakenEngine.vcxproj", "{23DCE617-11AE-42E2-B782-ED1105043C37}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KrakenEngineApp", "KrakenEngine\samples\KrakenEngineApp\KrakenEngineApp.vcxproj", "{F66A9A2A-0219-46B9-8E8A-14861A8CD5CD}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "KrakenExampleApp", "KrakenEngine\samples\KrakenEngineApp\KrakenEngineApp.vcxproj", "{F66A9A2A-0219-46B9-8E8A-14861A8CD5CD}"
 	ProjectSection(ProjectDependencies) = postProject
 		{23DCE617-11AE-42E2-B782-ED1105043C37} = {23DCE617-11AE-42E2-B782-ED1105043C37}
 	EndProjectSection

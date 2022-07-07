@@ -4,15 +4,19 @@
 #include <Kraken/Core/KRBase.h>
 
 namespace kraken {
-	class KrakenEngine: public KRBase {
+
+	class KrakenEngine {
+
 	public:
 		KrakenEngine() {}
 		~KrakenEngine() {}
+		
 		virtual void release() = 0;
+		virtual KRChapter* createChapter() = 0;
+		virtual ui32 getNumChapters() = 0;
 
-		virtual KRScene* createScene() = 0;
-		virtual ui32 getScenesID() = 0;
 	};
 
-	KRAKEN_API KrakenEngine* CreateKrakenEngine();
+	KR_API KrakenEngine* CreateKrakenEngine();
+
 }
