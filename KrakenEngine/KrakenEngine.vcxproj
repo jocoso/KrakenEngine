@@ -129,6 +129,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Kraken\Engine\CEntityComponentManager.cpp" />
+    <ClCompile Include="source\Kraken\Engine\CEntity.cpp" />
     <ClCompile Include="source\Kraken\Engine\CScene.cpp" />
     <ClCompile Include="source\Kraken\Engine\CFactory.cpp" />
     <ClCompile Include="source\Kraken\Engine\CEngine.cpp" />
@@ -136,6 +138,10 @@
     <ClCompile Include="include\Kraken\App\KRApplication.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Kraken\Engine\CEntityComponentManager.h" />
+    <ClInclude Include="source\Kraken\Engine\CEntity.h" />
+    <ClInclude Include="include\Kraken\Engine\KREntity.h" />
+    <ClInclude Include="include\Kraken\Engine\KREntityComponentManager.h" />
     <ClInclude Include="source\Kraken\Engine\CScene.h" />
     <ClInclude Include="source\Kraken\Engine\CFactory.h" />
     <ClInclude Include="include\Kraken\Core\KRBase.h" />

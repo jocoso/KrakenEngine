@@ -2,10 +2,13 @@
 #include <Kraken/Core/KRBase.h>
 
 namespace kraken {
-	class KRScene {
+	class KREntity;
+	class KRScene: public KRBase {
 	public:
 		KRScene() {}
-		~KRScene() {}
+		virtual ~KRScene() {}
 		virtual void release() = 0;
+
+		virtual KREntity* createEntity() = 0;
 	};
 }

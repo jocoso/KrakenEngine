@@ -1,7 +1,7 @@
 #pragma once
 
 #include <Kraken/Engine/KrakenEngine.h>
-#include "CFactory.h"
+#include "CScene.h"
 
 namespace kraken {
 	class CEngine: public kraken::KrakenEngine {
@@ -14,12 +14,12 @@ namespace kraken {
 		virtual ui32 getScenesID() override;
 
 	public:
-		static void create();
-		static CEngine* get();
+		static CEngine* create();
 	private:
 		static void destroy();
 	private:
 		static CEngine* m_instance;
+		CTemplateFactory<CScene> m_sceneFactory;
 	};
 
 }

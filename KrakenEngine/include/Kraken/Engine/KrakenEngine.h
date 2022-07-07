@@ -4,7 +4,7 @@
 #include <Kraken/Core/KRBase.h>
 
 namespace kraken {
-	class KrakenEngine {
+	class KrakenEngine: public KRBase {
 	public:
 		KrakenEngine() {}
 		~KrakenEngine() {}
