@@ -1,6 +1,6 @@
 #pragma once
 #include <Kraken/Engine/KrakenEngine.h>
-#include "BaseFactory.h"
+#include "BaseChapter.h"
 
 namespace kraken {
 
@@ -15,14 +15,15 @@ namespace kraken {
 		
 
 	public:
-		static void create();
-		static BaseEngine* get();
+		static BaseEngine* create();
 
 	private:
 		static void destroy();
 
 	private:
 		static BaseEngine* m_instance;
+		BaseTemplateFactory<BaseChapter> m_sceneFactory;
+
 	};
 
 }

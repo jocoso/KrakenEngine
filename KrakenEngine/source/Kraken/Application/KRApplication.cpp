@@ -7,14 +7,15 @@ KRApplication* KRApplication::m_instance = nullptr;
 kraken::KRApplication::KRApplication() {
 	ASSERT(!m_instance);
 	m_instance = this;
+	m_engine = CreateKrakenEngine();
 }
 
-kraken::KRApplication::~KRApplication() {}
+kraken::KRApplication::~KRApplication() {
+	m_engine->release(); // Deleting the engine
+}
 
 // Main Loop
 void kraken::KRApplication::run() {
-
-	m_engine = CreateKrakenEngine();
 
 	onInit();
 
@@ -25,8 +26,6 @@ void kraken::KRApplication::run() {
 	}
 
 	onStop();
-
-	m_engine->release(); // Deleting the engine
 
 }
 

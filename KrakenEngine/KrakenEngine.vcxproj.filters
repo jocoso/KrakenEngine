@@ -24,10 +24,13 @@
     <ClCompile Include="source\Kraken\Engine\BaseEngine.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\BaseFactory.cpp">
+    <ClCompile Include="source\Kraken\Engine\BaseChapter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="source\Kraken\Engine\BaseChapter.cpp">
+    <ClCompile Include="source\Kraken\Engine\BaseEntityComponentManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="source\Kraken\Engine\BaseEntity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -47,13 +50,22 @@
     <ClInclude Include="include\Kraken\Engine\KRChapter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="source\Kraken\Engine\BaseFactory.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="source\Kraken\Engine\BaseTemplateFactory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="source\Kraken\Engine\BaseChapter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kraken\Engine\KREntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Kraken\Engine\BaseEntityComponentManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="source\Kraken\Engine\BaseEntity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Kraken\Engine\KREntityComponentManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

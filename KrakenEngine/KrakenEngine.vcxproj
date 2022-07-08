@@ -129,16 +129,20 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="source\Kraken\Engine\BaseEntity.cpp" />
+    <ClCompile Include="source\Kraken\Engine\BaseEntityComponentManager.cpp" />
     <ClCompile Include="source\Kraken\Engine\BaseChapter.cpp" />
-    <ClCompile Include="source\Kraken\Engine\BaseFactory.cpp" />
     <ClCompile Include="source\Kraken\Engine\BaseEngine.cpp" />
     <ClCompile Include="source\Kraken\Application\KRApplication.cpp" />
     <ClCompile Include="include\Kraken\Application\KRApplication.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="source\Kraken\Engine\BaseEntity.h" />
+    <ClInclude Include="source\Kraken\Engine\BaseEntityComponentManager.h" />
+    <ClInclude Include="include\Kraken\Engine\KREntity.h" />
+    <ClInclude Include="include\Kraken\Engine\KREntityComponentManager.h" />
     <ClInclude Include="source\Kraken\Engine\BaseChapter.h" />
     <ClInclude Include="source\Kraken\Engine\BaseTemplateFactory.h" />
-    <ClInclude Include="source\Kraken\Engine\BaseFactory.h" />
     <ClInclude Include="include\Kraken\Core\KRBase.h" />
     <ClInclude Include="include\Kraken\Engine\KRChapter.h" />
     <ClInclude Include="source\Kraken\Engine\BaseEngine.h" />

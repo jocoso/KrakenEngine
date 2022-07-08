@@ -5,7 +5,7 @@ namespace kraken {
 	class KRBase {
 	public:
 		KRBase() {}
-		~KRBase() {}
+		virtual ~KRBase() {}
 		virtual void release() = 0;
 	};
 
