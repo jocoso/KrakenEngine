@@ -38,9 +38,10 @@ void* kraken::BaseEntityComponentManager::getComponentConcrete(KREntity* entity,
 		if (it2 != it->second.end()) {
 			return it2->second;
 		}
-		return nullptr;
 
 	}
+
+	return nullptr;
 }
 
 void kraken::BaseEntityComponentManager::removeComponentConcrete(KREntity* entity, size_t idComponent) {

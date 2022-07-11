@@ -1,13 +1,1 @@
-﻿  BaseWindow.cpp
-  BaseWin32Application.cpp
-  BaseEntityComponentManager.cpp
-  BaseEntity.cpp
-  BaseChapter.cpp
-  BaseEngine.cpp
-  KRApplication.cpp
-  KRApplication.h
-  KRComponent.cpp
-  BaseWin32Window.cpp
-  Generating Code...
-c:\users\josh\desktop\programming\krakenengine\krakenengine\source\kraken\engine\baseentitycomponentmanager.cpp(44): warning C4715: 'kraken::BaseEntityComponentManager::getComponentConcrete': not all control paths return a value
-  KrakenEngine.vcxproj -> C:\Users\Josh\Desktop\Programming\KrakenEngine\bin\x64\Debug\KrakenEngine.dll
+﻿  KrakenEngine.vcxproj -> C:\Users\Josh\Desktop\Programming\KrakenEngine\bin\x64\Debug\KrakenEngine.dll
