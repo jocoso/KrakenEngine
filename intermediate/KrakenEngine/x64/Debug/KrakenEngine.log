@@ -1,6 +1,13 @@
-﻿  KRApplication.cpp
-  BaseFactory.cpp
+﻿  BaseWindow.cpp
+  BaseWin32Application.cpp
+  BaseEntityComponentManager.cpp
+  BaseEntity.cpp
+  BaseChapter.cpp
+  BaseEngine.cpp
+  KRApplication.cpp
+  KRApplication.h
+  KRComponent.cpp
+  BaseWin32Window.cpp
   Generating Code...
-C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\intermediate\KrakenEngine\x64\Debug\KRApplication.obj : warning LNK4042: object specified more than once; extras ignored
-     Creating library C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\bin\x64\Debug\KrakenEngine.lib and object C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\bin\x64\Debug\KrakenEngine.exp
-  KrakenEngine.vcxproj -> C:\Users\Jocoso2218\Desktop\Programming\C++\Kraken\bin\x64\Debug\KrakenEngine.dll
+c:\users\josh\desktop\programming\krakenengine\krakenengine\source\kraken\engine\baseentitycomponentmanager.cpp(44): warning C4715: 'kraken::BaseEntityComponentManager::getComponentConcrete': not all control paths return a value
+  KrakenEngine.vcxproj -> C:\Users\Josh\Desktop\Programming\KrakenEngine\bin\x64\Debug\KrakenEngine.dll

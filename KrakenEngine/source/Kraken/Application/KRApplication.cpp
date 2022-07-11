@@ -1,5 +1,8 @@
 #include <Kraken/Application/KRApplication.h>
 #include <stdexcept>
+#include <chrono>
+#include <thread>
+
 using namespace kraken;
 
 KRApplication* KRApplication::m_instance = nullptr;
@@ -7,27 +10,11 @@ KRApplication* KRApplication::m_instance = nullptr;
 kraken::KRApplication::KRApplication() {
 	ASSERT(!m_instance);
 	m_instance = this;
+	m_engine = CreateKrakenEngine();
 }
 
-kraken::KRApplication::~KRApplication() {}
-
-// Main Loop
-void kraken::KRApplication::run() {
-
-	m_engine = CreateKrakenEngine();
-
-	onInit();
-
-	while (m_isRunning) {
-
-		onUpdate();
-
-	}
-
-	onStop();
-
-	m_engine->release(); // Deleting the engine
-
+kraken::KRApplication::~KRApplication() {
+	m_engine->release(); // Delete Engine
 }
 
 void kraken::KRApplication::stop() {

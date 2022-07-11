@@ -1,27 +1,18 @@
 #pragma once
 
 #include "BaseEngine.h"
-#include "BaseFactory.h"
 using namespace kraken;
 
 
 BaseEngine* BaseEngine::m_instance = nullptr;
 
-BaseEngine::BaseEngine() {
-	ASSERT(!m_instance);
-	m_instance = this;
-	BaseFactory::create();
-}
+BaseEngine::BaseEngine() {}
 
 BaseEngine::~BaseEngine() {}
 
-void BaseEngine::create() {
+BaseEngine* BaseEngine::create() {
 	ASSERT(!m_instance);
 	m_instance = new BaseEngine();
-}
-
-BaseEngine* BaseEngine::get() {
-	ASSERT(m_instance);
 	return m_instance;
 }
 
@@ -31,20 +22,25 @@ void BaseEngine::destroy() {
 }
 
 void BaseEngine::release() {
-	ASSERT(m_instance);
-	BaseFactory::get()->release();
-	delete m_instance;
+	BaseEngine::destroy();
 }
 
 KRChapter* kraken::BaseEngine::createChapter() {
-	return BaseFactory::get()->getChapterFactory()->createResource();
+	return m_chapterFactory.createResource();
 }
 
 ui32 kraken::BaseEngine::getNumChapters() {
-	return BaseFactory::get()->getChapterFactory()->getNumResources();
+	return m_chapterFactory.getNumResources();
+}
+
+KRWindow* kraken::BaseEngine::createWindow() {
+	return m_windowFactory.createResource();
+}
+
+ui32 kraken::BaseEngine::getNumWindows() {
+	return m_windowFactory.getNumResources();
 }
 
 KrakenEngine* kraken::CreateKrakenEngine() {
-	BaseEngine::create();
-	return BaseEngine::get();
+	return BaseEngine::create();
 }

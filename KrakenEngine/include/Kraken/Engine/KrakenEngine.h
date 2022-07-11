@@ -5,15 +5,18 @@
 
 namespace kraken {
 
-	class KrakenEngine {
+	class KrakenEngine : public KRBase {
 
 	public:
 		KrakenEngine() {}
-		~KrakenEngine() {}
-		
+		virtual ~KrakenEngine() {}
 		virtual void release() = 0;
+
 		virtual KRChapter* createChapter() = 0;
 		virtual ui32 getNumChapters() = 0;
+
+		virtual KRWindow* createWindow() = 0;
+		virtual ui32 getNumWindows() = 0;
 
 	};
 

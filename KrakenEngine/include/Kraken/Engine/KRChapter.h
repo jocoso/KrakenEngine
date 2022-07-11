@@ -3,10 +3,13 @@
 
 namespace kraken {
 
-	class KRChapter {
+	class KREntity;
+	class KRChapter: public KRBase {
 	public:
 		KRChapter() {}
-		~KRChapter() {}
+		virtual ~KRChapter() {}
 		virtual void release() = 0;
+
+		virtual KREntity* createEntity() = 0;
 	};
 }

@@ -11,11 +11,12 @@
 		#define KR_API __declspec(dllimport)
 	#endif
 
-	#define ASSERT(x) if ((x) == 0) {__debugbreak(); abort();}
+	#define ASSERT(x) if ((x)==0) {abort();}
 
 #endif
 
 namespace kraken {
+	class KRWindow;
 	class KRChapter;
 	typedef unsigned int ui32;
 }
